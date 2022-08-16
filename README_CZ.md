@@ -15,4 +15,4 @@ https://cs.wikipedia.org/wiki/Framework
 
 ## Příprava a nasazení 
 
-*Deployment* je způsob nasazení určité aplikace do daného prostředí s tím, že tvůrce má následně možnost navrátit některé změny či obnovení na původní verzi bez nutnosti vysokých nákladů a složitých úprav.
+**Deployment** je způsob nasazení určité aplikace do daného prostředí s tím, že tvůrce má následně možnost navrátit některé změny či obnovení na původní verzi bez nutnosti vysokých nákladů a složitých úprav.
