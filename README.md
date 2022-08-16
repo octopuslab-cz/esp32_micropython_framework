@@ -3,4 +3,4 @@
 
 ---
 
-[README_CZ](https://https://github.com/octopuslab-cz/esp32_micropython_framework/blob/master/README_CZ)
+[README_CZ](https://github.com/octopuslab-cz/esp32_micropython_framework/blob/main/README_CZ.md)
