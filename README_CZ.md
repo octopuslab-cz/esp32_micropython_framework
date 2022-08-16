@@ -18,3 +18,11 @@ https://cs.wikipedia.org/wiki/Framework
 **Deployment** je způsob nasazení určité aplikace do daného prostředí s tím, že tvůrce má následně možnost navrátit některé změny či obnovení na původní verzi bez nutnosti vysokých nákladů a složitých úprav.
 
 https://pypi.org/project/micropython-octopuslab-installer
+
+---
+
+## česká dokumentace
+
+https://docs.octopuslab.cz/
+
+---
