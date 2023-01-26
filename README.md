@@ -2,10 +2,10 @@
 
 ## 2023 - support to mip package manager
 
-`
+```
 import mip
 mip.install("github:octopuslab-cz/esp32_micropython_framework")
-`
+```
 
 ## 2022 - micropython-octopuslab-installer
 
