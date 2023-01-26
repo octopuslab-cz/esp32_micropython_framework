@@ -1,0 +1,10 @@
+{
+  "urls": [
+    ["components/led/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/led/__init__.mpy"],
+    ["components/analog/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/analog/__init__.mpy"],
+    ["components/rgb/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/rgb/__init__.py"]
+  ],
+  "deps": [
+  ],
+  "version": "0.2.0"
+}
