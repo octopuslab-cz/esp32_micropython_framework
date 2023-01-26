@@ -1,6 +1,13 @@
 # esp32_micropython_framework
 
-## micropython-octopuslab-installer
+## 2023 - support to mip package manager
+
+`
+import mip
+mip.install("github:octopuslab-cz/esp32_micropython_framework")
+`
+
+## 2022 - micropython-octopuslab-installer
 
 This module facilitates provisioning of ESP32 boards with MicroPython projects.
 We use it for deployment of **OctopusLab tools** on ESP32 boards (all examples bellow), but it may work on other MicroPython ports as well.
