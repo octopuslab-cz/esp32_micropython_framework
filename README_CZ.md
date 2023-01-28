@@ -9,17 +9,17 @@ https://cs.wikipedia.org/wiki/Framework
 
 https://github.com/octopuslab-cz/octopuslab-installer
 
-umí stáhnout a rozbalit vzdálený *.tar
+*umí stáhnout a rozbalit vzdálený soubor.**tar***
 
 
 https://github.com/octopusengine/micropython-shell
 
-nadstavba pro správu projektů (souborů) ve stylu Linuxového shellu
+*nadstavba pro správu projektů (souborů) ve stylu Linuxového shellu*
 
 
 https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython
 
-esp32_micropython_framework - verze 1.0, zdroje
+esp32_micropython_framework - *verze 1.0, zdroje*
 
 
 
