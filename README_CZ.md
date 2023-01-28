@@ -9,7 +9,7 @@ https://cs.wikipedia.org/wiki/Framework
 
 https://github.com/octopuslab-cz/octopuslab-installer
 
-*umí stáhnout a rozbalit vzdálený soubor.**tar***
+*umí stáhnout a rozbalit vzdálený `*.tar`*
 
 
 https://github.com/octopusengine/micropython-shell
