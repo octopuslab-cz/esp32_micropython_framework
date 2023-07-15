@@ -1,27 +1,36 @@
 {
   "urls": [
-  ["components/led/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/led/__init__.mpy"],
-  ["components/button/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/button/__init__.py"],
-  ["components/analog/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/analog/__init__.mpy"],
-  ["components/rgb/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/rgb/__init__.mpy"],
-  ["components/display7/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/display7/__init__.mpy"],
-  ["components/oled/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/oled/__init__.mpy"],
+  ["components/analog/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/analog/__init__.py"], 
+  ["components/button/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/button/__init__.py"], 
+  ["components/led/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/led/__init__.py"],
+  ["components/rgb/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/rgb/__init__.py"],
+  ["components/display7/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display7/__init__.py"],
+  ["components/oled/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/oled/__init__.py"],
   ["components/i2c_expander/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/i2c_expander/__init__.py"],
   ["components/servo/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/servo/__init__.py"],
+  ["components/buzzer/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/__init__.py"],	
+  ["components/buzzer/melody.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/melody.py"],
+  ["components/notes/melody.py", "github:octopuslab-cz/esp32_micropython_framework/components/notes/melody.py"],
 
-  ["lib/ftp.mpy", "github:octopuslab-cz/esp32_micropython_framework/lib/ftp.mpy"],
-  ["lib/pubsub.mpy", "github:octopuslab-cz/esp32_micropython_framework/lib/pubsub.mpy"],
-  ["lib/uping.mpy", "github:octopuslab-cz/esp32_micropython_framework/lib/uping.mpy"],
-  ["lib/temperature.mpy", "github:octopuslab-cz/esp32_micropython_framework/lib/temperature.mpy"],
-  ["lib/colors_rgb.mpy", "github:octopuslab-cz/esp32_micropython_framework/lib/colors_rgb.mpy"],
+  ["config/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/config/__init__.py"]
 
-  ["utils/setup.mpy", "github:octopuslab-cz/esp32_micropython_framework/utils/setup.mpy"],
-  ["utils/pinout.mpy", "github:octopuslab-cz/esp32_micropython_framework/utils/pinout.mpy"],
-  ["utils/octopus_decor.mpy", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_decor.mpy"],
-  ["utils/octopus_api.mpy", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_api.mpy"],
-  ["utils/wifi_connect.mpy", "github:octopuslab-cz/esp32_micropython_framework/utils/wifi_connect.mpy"],
-  
-  ["config/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/config/__init__.mpy"]
+  ["lib/ftp.py", "github:octopuslab-cz/esp32_micropython_framework/lib/ftp.py"],
+  ["lib/pubsub.py", "github:octopuslab-cz/esp32_micropython_framework/lib/pubsub.py"],
+  ["lib/uping.py", "github:octopuslab-cz/esp32_micropython_framework/lib/uping.py"],
+  ["lib/temperature.py", "github:octopuslab-cz/esp32_micropython_framework/lib/temperature.py"],
+  ["lib/colors_rgb.py", "github:octopuslab-cz/esp32_micropython_framework/lib/colors_rgb.py"],
+
+  ["utils/setup.py", "github:octopuslab-cz/esp32_micropython_framework/utils/setup.py"],
+  ["utils/pinout.py", "github:octopuslab-cz/esp32_micropython_framework/utils/pinout.py"],
+  ["utils/transform.py", "github:octopuslab-cz/esp32_micropython_framework/utils/transform.py"],
+  ["utils/octopus_decor.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_decor.py"],
+  ["utils/octopus_digital.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_digital.py"],
+  ["utils/octopus_api.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_api.py"],
+  ["utils/wifi_connect.py", "github:octopuslab-cz/esp32_micropython_framework/utils/wifi_connect.py"],
+
+  ["utils/bits/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/utils/bits/__init__.py"],
+  ["utils/mqtt/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/utils/mqtt/__init__.py"],
+  ["utils/mqtt/mqtt.py", "github:octopuslab-cz/esp32_micropython_framework/utils/mqtt/mqtt.py"],
   
   ],
   "deps": [
