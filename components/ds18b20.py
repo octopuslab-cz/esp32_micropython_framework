@@ -2,7 +2,7 @@
 # (c) OctopusLAB 2017-23
 
 """ 
-from components.iot import Thermometer
+from components.ds18b20 import Thermometer
 tt = Thermometer(32)
 tx = tt.ds.scan()
 tt.get_temp() # default index 0 > first sensor
