@@ -10,12 +10,14 @@ components.oled          Version information not available.
 -------------------------
 config.                  1.0.3
 -------------------------
-utils.setup              0.8.1 # 15.07.2023
-utils.wifi_connect       1.0.3
 utils.octopus_lib        1.2.0
 utils.octopus_decor      0.0.3
 utils.octopus_digital    0.2.1
 utils.octopus_api        1.0.2
+utils.pinout             1.0.2
+utils.setup              0.8.1 # 15.07.2023
+utils.transform          0.0.5
+utils.wifi_connect       1.0.3
 -------------------------
 components.servo         1.0.1
 ```
