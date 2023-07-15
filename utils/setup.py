@@ -1,13 +1,15 @@
+# (c) OctopusLAB 2018-23 - MIT
+
 # this module is to setup your board throuhg REPL
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-#TODO DRY for filename
+__version__ = "0.8.1 # 15.07.2023"
+
 import time, uos
 import ujson
 import machine # datetime
 
-__version__ = "0.8.1 # 15.07.2023"
 
 devices = [
 ["oLAB Default","esp32"],

@@ -1,6 +1,9 @@
 """this module is to load proper pinout per config"""
 import json
 
+__version__ = "1.0.1
+
+
 def set_pinout():
     device_config = {}
     pinout = None
@@ -31,13 +34,7 @@ def set_pinout():
         import pinouts.olab_esp8266_big_display as pinout
 
     if device_config.get('board_type') == "oLAB RobotBoard1" and device_config.get('soc_type') == "esp32":
-        import pinouts.olab_esp32_robot_board1 as pinout
-
-    if device_config.get('board_type') == "oLAB RobotBoard1 v1" and device_config.get('soc_type') == "esp32":
-        import pinouts.olab_esp32_robot_board1_v1 as pinout
-
-    if device_config.get('board_type') == "oLAB IoTBoard1" and device_config.get('soc_type') == "esp8266":
-        import pinouts.olab_esp8266_iot_board1 as pinout
+        import pinouts.olab_esp32_robot_board1 as pinout    
 
     if device_config.get('board_type') == "oLAB IoTBoard1" and device_config.get('soc_type') == "esp32":
         import pinouts.olab_esp32_iot_board1 as pinout

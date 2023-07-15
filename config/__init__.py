@@ -1,9 +1,7 @@
-"""
-octopusLAB - config class
-last update: 5.5.2020
+# (c) OctopusLAB 2018-23
 
-config (all) and config_data (for selected keys)
-set / get / 
+"""
+config (all) and config_data (for selected keys) - set/get/ 
 
 from config import Config
 keys = ["tempMax","tempMin"]
@@ -13,20 +11,18 @@ conf.setup()
 conf.create_from_query("a=1&b=2")
 conf.set("c",3)
 conf.save()
-
-ampy -p /COM6 put ./config/__init__.py config/__init__.py
 """
 
-__version__ = "1.0.1"
-
-class Conf:
-    TW = 50
+__version__ = "1.0.3"
 
 import ujson
 from ucollections import OrderedDict
+TW = 50
+
 
 # convert query "a=1&b=2" to dict {'a': '1', 'b': '2'}
 # test: q = ("a=1&b=2&x3=3&y5=5&z7=7")
+
 def query2dict(q):
     d = dict([v.split("=", 1) for v in q.split("&") if "=" in v])
     # d = OrderedDict(d)
@@ -74,9 +70,9 @@ class Config():
     def setup(self):
         while True:
             print()
-            print('=' * Conf.TW)
+            print('=' * TW)
             print('        S E T U P - ' + self.file)
-            print('=' * Conf.TW)
+            print('=' * TW)
             # show options with current values
             c = 0
             for i in self.keys:
@@ -85,7 +81,7 @@ class Config():
 
             print("[q] - Quit from json setup")
 
-            print('=' * Conf.TW)
+            print('=' *TW)
             sele = input("select: ")
 
             if sele == "q":
@@ -123,25 +119,25 @@ class Config():
 
     def print(self): # list_for_keys
         print()
-        print('=' * Conf.TW)
+        print('=' * TW)
         for ix in self.conf_data:
             try:
                 print(" %25s - %s " % (ix[0], self.config[ix[1]] ))
             except:
                 Err_print_config = True
-        print('=' * Conf.TW)
+        print('=' * TW)
 
 
     def print_all(self):
         print()
-        print('-' * Conf.TW)
+        print('-' * TW)
         for ix in self.config:
             try:
                 # print(ix, cc[ix]) # dict{}
                 print(" %25s - %s " % (ix, self.config[ix]))
             except:
                 Err_print_config = True
-        print('-' * Conf.TW)
+        print('-' * TW)
 
 
     def __str__(self):

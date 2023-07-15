@@ -1,4 +1,4 @@
-# (c) OctopusLAB 2017-23
+# (c) OctopusLAB 2017-23 - MIT
 
 LW=25 # LEFT_WIDTH
 
@@ -29,9 +29,14 @@ print_ver("display7")
 print_ver("oled")
 
 print("-"*LW)
+print_ver("","config.")
+
+print("-"*LW)
 print_ver("setup","utils.")
+print_ver("wifi_connect","utils.")
 print_ver("octopus_decor","utils.")
 print_ver("octopus_digital","utils.")
+print_ver("octopus_api","utils.")
 
 # import components.display7 as display7
 # print("{:<{width}}{}".format("components.display7", display7.__version__, width=LW))
