@@ -1,5 +1,12 @@
 # esp32_micropython_framework
 
+An older version of the module set was created between 2016 and 2022 for ESP32 with MicroPython here:
+https://github.com/octopusengine/octopuslab
+
+Since Micropython 1.20, new libraries are already being created here.
+
+---
+
 ## 2023 - support to mip package manager
 
 ```
