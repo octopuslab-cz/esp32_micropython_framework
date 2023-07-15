@@ -10,7 +10,7 @@
   ["components/servo/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/servo/__init__.py"],
   ["components/buzzer/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/__init__.py"],	
   ["components/buzzer/melody.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/melody.py"],
-  ["components/notes/melody.py", "github:octopuslab-cz/esp32_micropython_framework/components/notes/melody.py"],
+  ["components/buzzer/notes.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/notes.py"],
 
   ["config/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/config/__init__.py"]
 
