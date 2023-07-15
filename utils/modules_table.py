@@ -27,7 +27,7 @@ print_ver("buzzer")
 print_ver("i2c_expander")
 # #print_ver("servo")
 print_ver("display7")
-print_ver("ds18d20")
+print_ver("ds18b20")
 print_ver("oled")
 print_ver("uart_display")
 print_ver("i2c_eeprom_24xxx")
@@ -57,8 +57,3 @@ print_ver("wifi_connect","utils.")
 print("-"*LW)
 import components.servo as servo
 print("{:<{width}}{}".format("components.servo", servo.__version__, width=LW))
-
-
-
-
-
