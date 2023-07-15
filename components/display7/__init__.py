@@ -1,7 +1,8 @@
-# Display7 - 7segment x 8 digit
-# max7919
+# Display7 - 7segment x 8 digit / max7919
+# (c) OctopusLAB 2018-23
 
 __version__ = "1.2.0"
+
 
 REG_NOOP            = 0x00
 REG_DIGIT_BASE      = 0x01
@@ -27,6 +28,8 @@ CHAR_DATA = {
     'Y': 0x3b, 'Z': 0x6d, ' ': 0x00, '-': 0x01,
     '\xb0': 0x63, '.': 0x80
 }
+
+
 
 class Display7:
     def __init__(self, spi, ss, intensity=6, units=1):

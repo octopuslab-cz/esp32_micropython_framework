@@ -1,6 +1,5 @@
-# basic library for class Analog input
-# octopusLAB 2019
-
+# basic OctopusLAB library for class Analog input
+# (c) octopusLAB 2018-23
 """
 from components.analog import Analog
 an1 = Analog(36)
@@ -10,7 +9,7 @@ an1.get_adc_aver(20)
 an1.adc.atten(ADC.ATTN_2_5DB) #Full range: 3.3v
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from time import sleep_ms, sleep_us
 from machine import Pin, ADC
@@ -39,7 +38,8 @@ class Analog:
         print("analog input test: ")
         an = self.adc.read()
         print("RAW: " + str(an))
-        # TODO improve mapping formula, doc: https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/adc.html
+        # TODO improve mapping formula, doc: 
+        # https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/peripherals/adc.html
         print("volts: {0:.2f} V".format(an/4096*maxvolt), 20, 50)
 
 

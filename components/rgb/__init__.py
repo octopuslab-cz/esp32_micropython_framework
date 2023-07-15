@@ -1,5 +1,5 @@
-# library for ws rgb neopixel led - single / strip / ring
-# octopusLAB 2020
+# basic OctopusLAB library for ws rgb neopixel led - single/strip/ring
+# (c) octopusLAB 2020
 
 __version__ = "1.0.1"
 
@@ -27,6 +27,7 @@ def wheel(pos, dev = 1):
 
 def random_color():
     return wheel(urandom(1)[0])
+
 
 
 class Rgb(NeoPixel):

@@ -1,12 +1,12 @@
-# basic library for class Buzzer 
-# octopusLAB 2019
-
+# basic octopusLAB library for class Buzzer 
+# (c) octopusLAB 2018-23
 """ 
+from components.buzzer import Buzzer
 piezzo = Buzzer(33)
 piezzo.beep()
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from time import sleep_ms
 from machine import Pin, PWM
@@ -88,4 +88,3 @@ class Buzzer():
         self.nosound()
         if autoPause:
             self.play_tone(0, autoPause, 0)
-

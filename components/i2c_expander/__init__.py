@@ -1,10 +1,12 @@
-# basic library for 8bit expander
-# octopusLAB 2019 / FIRSTboard with PCF8574
-# from components.expander8 import Expander8
-# e8 = Expander8(addr) addr default 000 > 0x20
-# e8.test()
+# basic OctopusLAB library for 8bit expander
+# (c) octopusLAB 2018-23 / FIRSTboard with PCF8574
+"""
+from components.expander8 import Expander8
+e8 = Expander8(addr) addr default 000 > 0x20
+e8.test()
+"""
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 from time import sleep_ms
 from micropython import const
@@ -27,17 +29,6 @@ DEFAULT_ADDRESS = 0x20
 
 tempByte = bytearray(1)
 
-bar = (
-const(0b00000000), #0
-const(0b10000000), #1
-const(0b11000000), #2
-const(0b11100000), #3
-const(0b11110000), #4
-const(0b11111000), #5
-const(0b11111100), #6
-const(0b11111110), #7
-const(0b11111111)  #8
-)
 
 
 class Expander8:
@@ -106,6 +97,7 @@ class Expander8:
         for i in range(255):
             self.write(255-i)
             sleep_ms(delay)
+
 
 
 class Expander16(Expander8):
