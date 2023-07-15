@@ -1,7 +1,8 @@
 
 # from utils.sys_info import sys_info
 # sys_info()
-# 2019/03
+
+__version__ = "0.9.0" # 15.07.2023
 
 import machine
 import os, ubinascii
