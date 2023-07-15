@@ -1,3 +1,5 @@
+__version__ = "1.0.0"
+
 from time import sleep_ms
 from machine import Pin, I2C
 
@@ -34,9 +36,8 @@ def eeprom_read(addr):
 def eeprom_read_block(addr, num=8):
     data = i2c.readfrom_mem(EEPROM_ADDR, addr, num)
     return data
-
-
 """
+
 
 class EEPROM24x:
     """Driver for Microchip 24x02/04/.../256/512 EEPROM devices"""

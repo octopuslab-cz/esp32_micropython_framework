@@ -2,6 +2,9 @@
 # use:
 # from uart_display import display_row, display_start, display_point
 
+__version__ = "1.0.0"
+
+
 from time import sleep_ms
 from machine import UART
 from utils.octopus_decor import octopus_duration
