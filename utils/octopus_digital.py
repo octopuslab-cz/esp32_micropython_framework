@@ -1,7 +1,7 @@
 # octopusLAB - universal digital interface for microprocesor / EEPROM / Etc.
-__version__ = "0.2" # 2022/10/09
+from utils.bits import neg, reverse, int2bin, get_bit, set_bit
 
-# from utils.bits import neg, reverse, int2bin, get_bit, set_bit
+__version__ = "0.2.1" # 2022/10
 
 """
 # num: int (dec) / bin / hex

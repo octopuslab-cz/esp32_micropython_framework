@@ -1,17 +1,29 @@
-# basic OctopusLAB library for class Led 
-(c) octopusLAB 2018-23
-"""
-crom components.led import led 
+# basic library for class Led 
+# octopusLAB 2019
+""" 
 led = Led(2)
 led.value(1)
 """
 
-__version__ = "1.0.1"
+__version__ = "1.0.0"
 
 from time import sleep_ms
 from machine import Pin
 
+def blink(pin, length_on=1000, length_off=1000):
+    print("WARGNING: DEPRECATED: Do not USE, Use Led class instead!!")
 
+    if pin is None:
+        print("DUMMY_LED DEPRECATED: Blink")
+        return
+
+    if length_off == 1000 and length_on != 1000:
+        length_off = length_on
+
+    pin.value(1)
+    sleep_ms(length_on)
+    pin.value(0)
+    sleep_ms(length_off)
 
 class Led:
     def __init__(self, pin, value=False):

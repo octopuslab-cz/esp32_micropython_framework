@@ -1,27 +1,28 @@
-# Copyright OctopusLAB 2022
-# MIT License
+# Copyright OctopusLAB 2018-23
 # include this in boot.py or main.py as WiFiConnect
 
-# Usage:
-# from WiFiConnect import WiFiConnect
-# w = WiFiConnect()
-# w.events_add_connecting(function to callback connecting)
-# w.events_add_connected(function to callback connected)
-# w.connect(ssid, password)
-#
-# or add networks by
-# w.add_network(ssid, password)
-# and then use for connect to known networks
-# w.connect()
-
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 __license__ = "MIT"
 
 
-# Includes
+"""
+Usage:
+from WiFiConnect import WiFiConnect
+w = WiFiConnect()
+w.events_add_connecting(function to callback connecting)
+w.events_add_connected(function to callback connected)
+w.connect(ssid, password)
+
+or add networks by
+w.add_network(ssid, password)
+and then use for connect to known networks
+w.connect()
+"""
+
 import network
 import json
 from time import sleep, sleep_ms
+
 
 class WiFiConnect:
     STA_IF = 0

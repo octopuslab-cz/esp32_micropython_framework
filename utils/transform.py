@@ -1,8 +1,8 @@
-import math
+# octopusLAB - basic lib. transform math
+
+__version__ = "0.0.5"
 
 """
-octopusLAB - basic lib. transform math
-2019/11
 inspir: https://github.com/aquila12/me-arm-ik
 todo
 class: point2d / point3d
@@ -10,10 +10,10 @@ gimbal: 2 x pol / const r
 IK: invers kinematics
 for robotic arm (3/5 axes)
 drawbot and polar graph math.
-
-from utils.transform import *
-ampy -p /COM6 put ./util/transform.py util/transform.py
 """
+
+import math
+
 
 point0_2d = 0, 0
 point0_3d = 0, 0, 0

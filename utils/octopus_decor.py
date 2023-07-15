@@ -1,11 +1,13 @@
 # this module is "decorators" library for Octopus FrameWork
+
+__version__ = "0.0.3" # 2022/10
+
 """
 usage:
 from utils.octopus_decor import octopus_duration, octopus_debug
 @octopus_duration
 def yourFunc(): ...
 """
-
 
 def octopus_duration(milis=True):
          

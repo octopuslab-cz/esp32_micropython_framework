@@ -7,7 +7,7 @@ import time, uos
 import ujson
 import machine # datetime
 
-ver = "0.8.1 / 15.07.2023"
+__version__ = "0.8.1 # 15.07.2023"
 
 devices = [
 ["oLAB Default","esp32"],
@@ -98,6 +98,7 @@ def setupMenu():
     # print("[mq]  - mqtt() and sending data setup")
     # print("[st]  - set time")
     print(" [si]   - system info")
+    print(" [mt]   - modules table")
     print(" [wr]   - run web repl")
     print(" [ftp]  - start FTP")
     print(" [q]    - quit setup")
@@ -181,7 +182,7 @@ def shutil():
 def setup():
     mainOctopus()
     print("Hello, this will help you initialize your ESP")
-    print("ver: " + ver + " (c)octopusLAB")
+    print("ver: " + __version__ + " (c)octopusLAB")
     print("Press Ctrl+C to abort")
 
     # TODO improve this
@@ -343,6 +344,9 @@ def setup():
             shutil()
             deplUrl = "https://iot.petrkr.net/olab/micro-gui.tar"
             deploy(deplUrl)
+            
+        if sele == "mt":   
+            from utils import modules_table
 
         if sele == "wr":
             print("under reconstruction <")
