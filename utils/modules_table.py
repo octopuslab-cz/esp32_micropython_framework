@@ -38,6 +38,7 @@ print_ver("octopus_digital","utils.")
 print_ver("octopus_api","utils.")
 print_ver("pinout","utils.")
 print_ver("setup","utils.")
+print_ver("sys_info","utils.")
 print_ver("transform","utils.")
 print_ver("wifi_connect","utils.")
 
