@@ -7,7 +7,7 @@ import time, uos
 import ujson
 import machine # datetime
 
-ver = "0.8.0 / 15.07.2023"
+ver = "0.8.1 / 15.07.2023"
 
 devices = [
 ["oLAB Default","esp32"],
@@ -88,6 +88,7 @@ def setupMenu():
     print(" [cw]   - connect wifi")
     print(" [cl]   - connect LAN")
     print(" [mu]   - mip update > octopus Framework")
+    print(" [ms]   - mip shell > uPyShell")
     #print(" [sd]   - system download > stable octopus modules from URL")
     #print(" [sdg]  - system download > Micro-GUI library")
     #print(" [sde]  - system download > examples (from URL) /[sdh] hydroponics")
@@ -229,11 +230,16 @@ def setup():
             # io menu
             ioMenu()
 
-	if sele == "mu":
+        if sele == "mu":
             print("mip update > octopus Framework")
             import mip
             # io menu
-	    mip.install("github:octopuslab-cz/esp32_micropython_framework", target=".")
+            mip.install("github:octopuslab-cz/esp32_micropython_framework", target=".")
+            
+        if sele == "ms":
+            print("--> [micropython-shell - 2022]")
+            import mip
+            mip.install("github:octopusengine/micropython-shell/mip_pkg_mpy_22", target=".")
 
 
         if sele == "w":
