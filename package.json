@@ -1,10 +1,13 @@
 {
   "urls": [
   ["components/led/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/led/__init__.mpy"],
+  ["components/button/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/button/__init__.py"],
   ["components/analog/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/analog/__init__.mpy"],
   ["components/rgb/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/rgb/__init__.mpy"],
   ["components/display7/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/display7/__init__.mpy"],
   ["components/oled/__init__.mpy", "github:octopuslab-cz/esp32_micropython_framework/components/oled/__init__.mpy"],
+  ["components/i2c_expander/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/i2c_expander/__init__.py"],
+  ["components/servo/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/servo/__init__.py"],
 
   ["lib/ftp.mpy", "github:octopuslab-cz/esp32_micropython_framework/lib/ftp.mpy"],
   ["lib/pubsub.mpy", "github:octopuslab-cz/esp32_micropython_framework/lib/pubsub.mpy"],
