@@ -1,6 +1,6 @@
 # (c) OctopusLAB 2017-23 - MIT
 
-LW=25 # LEFT_WIDTH
+LW=29 # LEFT_WIDTH
 
 def get_ver(module,subdir="components."):
     try:
@@ -27,8 +27,8 @@ print_ver("buzzer")
 print_ver("i2c_expander")
 # #print_ver("servo")
 print_ver("display7")
-print_ver("oled")
 print_ver("ds18d20")
+print_ver("oled")
 print_ver("uart_display")
 print_ver("i2c_eeprom_24xxx")
 
