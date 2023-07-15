@@ -1,7 +1,7 @@
 """this module is to load proper pinout per config"""
 import json
 
-__version__ = "1.0.1
+__version__ = "1.0.2"
 
 
 def set_pinout():
@@ -15,7 +15,8 @@ def set_pinout():
             device_config = json.loads(d)
     except:
         print("Device config 'config/device.json' does not exist, please run setup()")
-        import pinouts.base as pinout
+        # import pinouts.base as pinout
+        import pinouts.olab_esp32_default as pinout
         return pinout
 
     if device_config.get('board_type') == "oLAB Default" and device_config.get('soc_type') == "esp32":
