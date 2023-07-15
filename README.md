@@ -3,7 +3,7 @@
 An older version of the module set was created between 2016 and 2022 for ESP32 with MicroPython here:
 https://github.com/octopusengine/octopuslab
 
-Since Micropython 1.20, new libraries are already being created here.
+Since MicroPython *ver. 1.20*, new libraries are already being created here, as **esp32_micropython_framework**
 
 ---
 
