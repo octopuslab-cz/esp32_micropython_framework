@@ -1,5 +1,5 @@
 # basic library for IoT board
-# (c) OctopusLAB 2017-23
+# (c) OctopusLAB 2017-23 - MIT
 
 """ 
 from components.ds18b20 import Thermometer
@@ -9,17 +9,10 @@ tt.get_temp() # default index 0 > first sensor
 tt.get_temp(tx[0])
 """
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 from time import sleep_ms
 from machine import Pin
-from utils.pinout import set_pinout
-
-pinout = set_pinout()
-default_relay_pin = pinout.RELAY_PIN
-default_pwm_pin = pinout.MFET_PIN
-# default_temp_pin = pinout.MFET_PIN
-
 
 
 class Thermometer:
