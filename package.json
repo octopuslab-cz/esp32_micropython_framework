@@ -26,6 +26,7 @@
   ["utils/pinout.py", "github:octopuslab-cz/esp32_micropython_framework/utils/pinout.py"],
   ["utils/transform.py", "github:octopuslab-cz/esp32_micropython_framework/utils/transform.py"],
   ["utils/octopus_decor.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_decor.py"],
+  ["utils/octopus_lib.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_lib.py"],
   ["utils/octopus_digital.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_digital.py"],
   ["utils/octopus_api.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_api.py"],
   ["utils/wifi_connect.py", "github:octopuslab-cz/esp32_micropython_framework/utils/wifi_connect.py"],
