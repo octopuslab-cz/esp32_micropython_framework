@@ -23,6 +23,7 @@
   ["lib/colors_rgb.py", "github:octopuslab-cz/esp32_micropython_framework/lib/colors_rgb.py"],
 
   ["utils/setup.py", "github:octopuslab-cz/esp32_micropython_framework/utils/setup.py"],
+  ["utils/modules_table.py", "github:octopuslab-cz/esp32_micropython_framework/utils/modules_table.py"],
   ["utils/pinout.py", "github:octopuslab-cz/esp32_micropython_framework/utils/pinout.py"],
   ["utils/transform.py", "github:octopuslab-cz/esp32_micropython_framework/utils/transform.py"],
   ["utils/octopus_decor.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_decor.py"],
