@@ -96,7 +96,7 @@ def setupMenu():
     #print(" [sde]  - system download > examples (from URL) /[sdh] hydroponics")
     #print(" [sdo]  - system download > octopus (Alfa octopus modules from URL)")
     print(" [ds]   - device setting")
-    print(" [ios]  - I/O setting submenu")
+    # print(" [ios]  - I/O setting submenu")
     # print("[mq]  - mqtt() and sending data setup")
     # print("[st]  - set time")
     print(" [si]   - system info")
