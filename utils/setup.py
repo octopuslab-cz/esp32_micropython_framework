@@ -7,16 +7,13 @@ import time, uos
 import ujson
 import machine # datetime
 
-ver = "0.74 / 15.04.2022"
+ver = "0.8.0 / 15.07.2023"
 
 devices = [
 ["oLAB Default","esp32"],
 ["oLAB DOIT adapter","esp32"],
 ["oLAB Tickernator","esp8266"],
-["oLAB Witty","esp8266"],
-["oLAB BigDisplay3","esp8266"],
 ["oLAB RobotBoard1","esp32"],
-["oLAB IoTBoard1","esp8266"],
 ["oLAB IoTBoard1","esp32"],
 ["oLAB LANboard1","esp32"],
 ["oLAB ESP32board1", "esp32"],
@@ -90,10 +87,11 @@ def setupMenu():
     print(" [w]    - wifi submenu")
     print(" [cw]   - connect wifi")
     print(" [cl]   - connect LAN")
-    print(" [sd]   - system download > stable octopus modules from URL")
-    print(" [sdg]  - system download > Micro-GUI library")
-    print(" [sde]  - system download > examples (from URL) /[sdh] hydroponics")
-    print(" [sdo]  - system download > octopus (Alfa octopus modules from URL)")
+    print(" [mu]   - mip update > octopus Framework")
+    #print(" [sd]   - system download > stable octopus modules from URL")
+    #print(" [sdg]  - system download > Micro-GUI library")
+    #print(" [sde]  - system download > examples (from URL) /[sdh] hydroponics")
+    #print(" [sdo]  - system download > octopus (Alfa octopus modules from URL)")
     print(" [ds]   - device setting")
     print(" [ios]  - I/O setting submenu")
     # print("[mq]  - mqtt() and sending data setup")
@@ -230,6 +228,13 @@ def setup():
             print("I/O setting:")
             # io menu
             ioMenu()
+
+	if sele == "mu":
+            print("mip update > octopus Framework")
+            import mip
+            # io menu
+	    mip.install("github:octopuslab-cz/esp32_micropython_framework", target=".")
+
 
         if sele == "w":
             from utils.wifi_connect import WiFiConnect
