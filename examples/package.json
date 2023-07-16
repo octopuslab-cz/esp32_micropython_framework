@@ -3,7 +3,7 @@
   ["examples/led_blink.py", "github:octopuslab-cz/esp32_micropython_framework/examples/led_blink.py"], 
   ["examples/led_class.py", "github:octopuslab-cz/esp32_micropython_framework/examples/led_class.py"], 
   ["examples/ button_irq.py", "github:octopuslab-cz/esp32_micropython_framework/examples/ button_irq.py"], 
-  
+  ],
   "deps": [
   ],
   "version": "0.0.1"
