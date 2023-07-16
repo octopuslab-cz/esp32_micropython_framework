@@ -8,6 +8,7 @@
   ["examples/display8_show.py", "github:octopuslab-cz/esp32_micropython_framework/examples/display8_show.py"],
   ["examples/display4_show.py", "github:octopuslab-cz/esp32_micropython_framework/examples/display4_show.py"],
   ["examples/temperature_ds.py", "github:octopuslab-cz/esp32_micropython_framework/examples/temperature_ds.py"],
+  ["examples/display_lcd2.py", "github:octopuslab-cz/esp32_micropython_framework/examples/display_lcd2.py"],
   ],
   "deps": [
   ],
