@@ -1,4 +1,4 @@
-# basic library for IoT board
+# basic OctopusLAB library for IoT board
 # (c) OctopusLAB 2017-23 - MIT
 
 """ 
@@ -6,10 +6,10 @@ from components.ds18b20 import Thermometer
 tt = Thermometer(32)
 tx = tt.ds.scan()
 tt.get_temp() # default index 0 > first sensor
-tt.get_temp(tx[0])
+tt.get_temp(0)
 """
 
-__version__ = "1.0.2"
+__version__ = "2.0.1"
 
 from time import sleep_ms
 from machine import Pin
@@ -36,7 +36,7 @@ class Thermometer:
         sleep_ms(750)
         temp = None
 
-        # Sometimes CRC read error occures, so try read more times
+        # Sometimes CRC read error occures -> read more times
         retry = 0
         while temp is None:
             retry+=1

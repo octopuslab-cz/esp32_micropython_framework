@@ -1,7 +1,7 @@
-# basic OctopusLAB library for ws rgb neopixel led - single/strip/ring
-# (c) octopusLAB 2020
+# basic OctopusLAB library for ws RGB neopixel led - single/strip/ring
+# (c) octopusLAB 2017-23
 
-__version__ = "1.0.1"
+__version__ = "2.0.1"
 
 from time import sleep, sleep_ms
 from os import urandom
