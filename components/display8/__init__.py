@@ -31,7 +31,7 @@ CHAR_DATA = {
 
 
 
-class Display7:
+class Display8:
     def __init__(self, spi, ss, intensity=6, units=1):
         self.spi = spi
         self.ss = ss
