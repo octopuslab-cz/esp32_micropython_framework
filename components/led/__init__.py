@@ -1,11 +1,12 @@
 # basic library for class Led 
-# octopusLAB 2019
-""" 
+# (c) OctopusLAB 2016-23
+"""
+from components.led import Led
 led = Led(2)
 led.value(1)
 """
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 
 from time import sleep_ms
 from machine import Pin
@@ -25,6 +26,7 @@ def blink(pin, length_on=1000, length_off=1000):
     pin.value(0)
     sleep_ms(length_off)
 
+
 class Led:
     def __init__(self, pin, value=False):
         self.pin = None
@@ -37,6 +39,7 @@ class Led:
         self.pin = Pin(pin, Pin.OUT)
         self.pin.value(self.state)
 
+    
     def blink(self, length_on=1000, length_off=1000):
         if length_off == 1000 and length_on != 1000:
             length_off = length_on
