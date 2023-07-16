@@ -9,6 +9,8 @@
   ["components/pwm/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/pwm/__init__.py"],
   ["components/display4/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display4/__init__.py"],
   ["components/display8/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display8/__init__.py"],
+  ["components/display_i2c_lcd/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_lcd/__init__.py"],
+  ["components/display_i2c_lcd/lcd_api.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_lcd/lcd_api.py"],
   ["components/oled/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/oled/__init__.py"],
   ["components/i2c_expander/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/i2c_expander/__init__.py"],
   ["components/buzzer/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/__init__.py"],	
@@ -49,5 +51,5 @@
   ],
   "deps": [
   ],
-  "version": "0.2.1"
+  "version": "0.2.2"
 }
