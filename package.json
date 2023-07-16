@@ -7,14 +7,14 @@
   ["components/led/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/led/__init__.py"],
   ["components/rgb/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/rgb/__init__.py"],
   ["components/pwm/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/pwm/__init__.py"],
-  ["components/display7/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display7/__init__.py"],
+  ["components/display4/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display4/__init__.py"],
+  ["components/display8/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display8/__init__.py"],
   ["components/oled/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/oled/__init__.py"],
   ["components/i2c_expander/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/i2c_expander/__init__.py"],
   ["components/buzzer/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/__init__.py"],	
   ["components/buzzer/melody.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/melody.py"],
   ["components/buzzer/notes.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/notes.py"],
   ["components/servo/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/servo/__init__.py"],
-  ["components/tm1637.py", "github:octopuslab-cz/esp32_micropython_framework/components/tm1637.py"],
   ["components/ds18b20.py", "github:octopuslab-cz/esp32_micropython_framework/components/ds18b20.py"],
     
   ["config/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/config/__init__.py"]
