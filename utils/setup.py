@@ -4,7 +4,7 @@
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-__version__ = "0.8.2 # 15.07.2023"
+__version__ = "2.0.0" # 16.07.2023
 
 import time, uos
 import ujson
@@ -90,13 +90,14 @@ def setupMenu():
     print(" [cw]   - connect wifi")
     print(" [cl]   - connect LAN")
     print(" [mu]   - mip update > octopus Framework")
-    print(" [ms]   - mip shell > uPyShell")
+    print(" [me]   - mip examples > load examples/...")
+    print(" [ms]   - mip shell > install uPyShell")
     #print(" [sd]   - system download > stable octopus modules from URL")
     #print(" [sdg]  - system download > Micro-GUI library")
     #print(" [sde]  - system download > examples (from URL) /[sdh] hydroponics")
     #print(" [sdo]  - system download > octopus (Alfa octopus modules from URL)")
     print(" [ds]   - device setting")
-    # print(" [ios]  - I/O setting submenu")
+    print(" [ios]  - I/O setting submenu")
     # print("[mq]  - mqtt() and sending data setup")
     # print("[st]  - set time")
     print(" [si]   - system info")
@@ -184,7 +185,7 @@ def shutil():
 def setup():
     mainOctopus()
     print("Hello, this will help you initialize your ESP")
-    print("ver: " + __version__ + " (c)octopusLAB")
+    print("ver: " + __version__ + " (c) OctopusLAB 2016-23")
     print("Press Ctrl+C to abort")
 
     # TODO improve this
@@ -239,11 +240,16 @@ def setup():
             # io menu
             mip.install("github:octopuslab-cz/esp32_micropython_framework", target=".")
             
+        if sele == "me":
+            print("load mip examples")
+            import mip
+            # io menu
+            mip.install("github:octopuslab-cz/esp32_micropython_framework/examples", target=".")
+            
         if sele == "ms":
             print("--> [micropython-shell - 2022]")
             import mip
             mip.install("github:octopusengine/micropython-shell/mip_pkg_mpy_22", target=".")
-
 
         if sele == "w":
             from utils.wifi_connect import WiFiConnect
