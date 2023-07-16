@@ -12,6 +12,8 @@ Since MicroPython *ver. 1.20*, new libraries are already being created here, as 
 ```
 import mip
 mip.install("github:octopuslab-cz/esp32_micropython_framework")
+
+mip.install("github:octopuslab-cz/esp32_micropython_framework/examples")
 ```
 
 ## 2022 - micropython-octopuslab-installer
