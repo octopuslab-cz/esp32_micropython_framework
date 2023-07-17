@@ -19,6 +19,7 @@
   ["components/buzzer/notes.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/notes.py"],
   ["components/servo/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/servo/__init__.py"],
   ["components/ds18b20.py", "github:octopuslab-cz/esp32_micropython_framework/components/ds18b20.py"],
+  ["components/mpu6050.py", "github:octopuslab-cz/esp32_micropython_framework/components/mpu6050.py"],
     
   ["config/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/config/__init__.py"],
   ["config/nvs.py", "github:octopuslab-cz/esp32_micropython_framework/config/nvs.py"],
