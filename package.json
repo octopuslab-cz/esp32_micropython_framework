@@ -49,6 +49,7 @@
   ["pinouts/olab_esp32_doit_adapter.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/olab_esp32_doit_adapter.py"],
   ["pinouts/olab_esp32_esp32_board1.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/olab_esp32_esp32_board1.py"],
   ["pinouts/olab_esp32_robot_board1.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/olab_esp32_robot_board1.py"],
+  ["pinouts/olab_esp32_hooka.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/olab_esp32_hooka.py"],
   ],
   "deps": [
   ],
