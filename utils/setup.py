@@ -250,6 +250,12 @@ def setup():
             import mip
             # io menu
             mip.install("github:octopuslab-cz/esp32_micropython_framework/examples", target=".")
+
+        if sele == "ot": # undocumented
+            print("load mip tests")
+            import mip
+            # io menu
+            mip.install("github:octopuslab-cz/esp32_micropython_framework/tests", target=".")
             
         if sele == "os":
             print("--> [micropython-shell - 2022]")
