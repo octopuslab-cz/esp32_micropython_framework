@@ -4,7 +4,7 @@
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-__version__ = "2.0.2" # 17.07.2023
+__version__ = "2.0.3"
 
 import time, uos
 import ujson
@@ -90,6 +90,7 @@ def setupMenu():
     print(" [w]    - wifi submenu")
     print(" [cw]   - connect wifi")
     print(" [cl]   - connect LAN")
+    print(" [wr]   - run web repl")
     print(" [ftp]  - start FTP")
     print('-' * 32)
     print(" [mo]   - mip octopus - update octopus Framework")
@@ -101,13 +102,13 @@ def setupMenu():
     #print(" [sdo]  - system download > octopus (Alfa octopus modules from URL)")
     print('-' * 32)
     print(" [ds]   - device setting")
-    print(" [ios]  - I/O setting submenu")
+    # print(" [ios]  - I/O setting submenu")
     # print("[mq]  - mqtt() and sending data setup")
     # print("[st]  - set time")
     print(" [si]   - system info")
     print(" [pi]   - PINs info")
     print(" [mi]   - modules info - table")
-    print(" [wr]   - run web repl")
+    print('-' * 32)
     print(" [q]    - quit setup")
 
     print('=' * 32)

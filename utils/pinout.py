@@ -1,7 +1,7 @@
 """this module is to load proper pinout per config"""
 import json
 
-__version__ = "2.0.5"
+__version__ = "2.0.6"
 
 
 def set_pinout():
@@ -66,6 +66,6 @@ def print_pinout():
         #var_value = getattr(pinout, var_name)
         if not callable(getattr(pinout, var_name)):
             var_value = getattr(pinout, var_name)
-            if line > 2:
+            if line > 2 and var_value is not None:
                 print(f"{line-2} {var_name}: {var_value}")
             line += 1
