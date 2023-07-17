@@ -2,7 +2,7 @@
 # (c) OctopusLAB 2017-23 - MIT
 
 from time import sleep
-from components.rgb import Rgb
+from components.ws_rgb import Rgb
 
 print("[--- init ---] RGB LED ws2812x")
 
@@ -14,9 +14,11 @@ sleep(0.5)
 rgb.color((20,0,0))
 sleep(0.5)
 
-from colors_rgb import * # RED, GREEN, BLUE, ORANGE, WHITE...
-rgb.color(BLUE)
-sleep(2)
+from components.ws_rgb.colors_rgb import * # RED, GREEN, BLUE, ORANGE, WHITE...
+rgb.color(ORANGE)
+sleep(1)
+rgb.color(PURPLE)
+sleep(1)
 
 rgb.simpleTest()
 rgb.rainbow_cycle()
