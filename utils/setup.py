@@ -4,7 +4,7 @@
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-__version__ = "2.0.3"
+__version__ = "2.0.5"
 
 import time, uos
 import ujson
@@ -12,16 +12,16 @@ import machine # datetime
 
 
 devices = [
-["oLAB Default","esp32"],
-["oLAB DOIT adapter","esp32"],
-["oLAB Tickernator","esp8266"],
-["oLAB RobotBoard1","esp32"],
-["oLAB IoTBoard1","esp32"],
-["oLAB LANboard1","esp32"],
-["oLAB HOOKAboard","esp32"],
-["oLAB ESP32board1", "esp32"],
+["Default","esp32"],
+["DOIT adapter","esp32"],
+["Tickernator","esp8266"],
+["RobotBoard1","esp32"],
+["IoTBoard1","esp32"],
+["LANboard1","esp32"],
+["HOOKAboard","esp32"],
+["ESP32board1", "esp32"],
+["PLCshield","esp32"],
 ["WeMos OLED","esp32"],
-["oLAB PLCshield","esp32"]
 ]
 
 octopusASCII = [
