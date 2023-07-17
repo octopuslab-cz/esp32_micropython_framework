@@ -1,5 +1,7 @@
+# (c) OctopusLAB 2017-23 - MIT
 # Base abstract pinouts without any, this base can be replaced by any board specific settings
 # Here should be definiton of every pins used in Octopus library
+# ver. 2+ (2022)
 
 BUILT_IN_LED = None
 HALL_SENSOR  = None
