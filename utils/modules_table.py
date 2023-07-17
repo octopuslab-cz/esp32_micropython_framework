@@ -21,7 +21,7 @@ def print_ver(module,subdir="components."):
 print("-"*LW)
 print_ver("led")
 print_ver("button")
-print_ver("rgb")
+print_ver("ws_rgb")
 print_ver("pwm")
 print_ver("buzzer")
 print_ver("i2c_expander")
