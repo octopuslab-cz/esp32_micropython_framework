@@ -1,7 +1,7 @@
 """this module is to load proper pinout per config"""
 import json
 
-__version__ = "1.0.2"
+__version__ = "2.0.3"
 
 
 def set_pinout():
