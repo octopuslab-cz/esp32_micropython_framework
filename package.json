@@ -1,6 +1,7 @@
 {
   "urls": [
   ["boot.py", "github:octopuslab-cz/esp32_micropython_framework/boot.py"], 
+  ["webrepl_cfg.py", "github:octopuslab-cz/esp32_micropython_framework/webrepl_cfg.py"], 
 
   ["components/analog/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/analog/__init__.py"], 
   ["components/button/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/button/__init__.py"], 
