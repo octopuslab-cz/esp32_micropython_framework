@@ -35,7 +35,10 @@ def set_pinout():
         import pinouts.olab_esp8266_big_display as pinout
 
     if device_config.get('board_type') == "oLAB RobotBoard1" and device_config.get('soc_type') == "esp32":
-        import pinouts.olab_esp32_robot_board1 as pinout    
+        import pinouts.olab_esp32_robot_board1 as pinout
+
+    if device_config.get('board_type') == "oLAB HOOKAboard" and device_config.get('soc_type') == "esp32":
+        import pinouts.olab_esp32_hooka as pinout
 
     if device_config.get('board_type') == "oLAB IoTBoard1" and device_config.get('soc_type') == "esp32":
         import pinouts.olab_esp32_iot_board1 as pinout
