@@ -21,7 +21,7 @@ def set_pinout():
     except:
         print("Device config 'config/device.json' does not exist, please run setup()")
         # import pinouts.base as pinout
-        import pinouts.olab_esp32_default as pinout
+        import pinouts.esp32_default as pinout
         return pinout
 
     if device_config.get('board_type') == "Default" and device_config.get('soc_type') == "esp32":
