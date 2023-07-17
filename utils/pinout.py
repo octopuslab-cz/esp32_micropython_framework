@@ -1,7 +1,7 @@
 """this module is to load proper pinout per config"""
 import json
 
-__version__ = "2.0.3"
+__version__ = "2.0.5"
 
 
 def set_pinout():
@@ -56,3 +56,16 @@ def set_pinout():
         import pinouts.olab_esp32_plc_shield as pinout
 
     return pinout
+
+
+def print_pinout():
+    pinout = set_pinout()
+    line = 0
+    
+    for var_name in dir(pinout):
+        #var_value = getattr(pinout, var_name)
+        if not callable(getattr(pinout, var_name)):
+            var_value = getattr(pinout, var_name)
+            if line > 2:
+                print(f"{line-2} {var_name}: {var_value}")
+            line += 1
