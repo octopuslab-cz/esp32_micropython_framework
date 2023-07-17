@@ -19,7 +19,8 @@
   ["components/servo/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/servo/__init__.py"],
   ["components/ds18b20.py", "github:octopuslab-cz/esp32_micropython_framework/components/ds18b20.py"],
     
-  ["config/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/config/__init__.py"]
+  ["config/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/config/__init__.py"],
+  ["config/nvs.py", "github:octopuslab-cz/esp32_micropython_framework/config/nvs.py"],
 
   ["lib/ftp.py", "github:octopuslab-cz/esp32_micropython_framework/lib/ftp.py"],
   ["lib/pubsub.py", "github:octopuslab-cz/esp32_micropython_framework/lib/pubsub.py"],
