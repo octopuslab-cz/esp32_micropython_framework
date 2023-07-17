@@ -1,0 +1,10 @@
+{
+  "urls": [
+ ["tests/test_components.py", "github:octopuslab-cz/esp32_micropython_framework/tests/test_components.py"],
+ ["tests/test_speed.py", "github:octopuslab-cz/esp32_micropython_framework/tests/test_speed.py"],
+ ["tests/test_hooka.py", "github:octopuslab-cz/esp32_micropython_framework/tests/test_hooka.py"],
+ ],
+  "deps": [
+  ],
+  "version": "0.0.1"
+}
