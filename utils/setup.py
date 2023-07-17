@@ -4,7 +4,7 @@
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-__version__ = "2.0.0" # 16.07.2023
+__version__ = "2.0.1" # 17.07.2023
 
 import time, uos
 import ujson
@@ -18,6 +18,7 @@ devices = [
 ["oLAB RobotBoard1","esp32"],
 ["oLAB IoTBoard1","esp32"],
 ["oLAB LANboard1","esp32"],
+["oLAB HOOKAboard","esp32"],
 ["oLAB ESP32board1", "esp32"],
 ["WeMos OLED","esp32"],
 ["oLAB PLCshield","esp32"]
