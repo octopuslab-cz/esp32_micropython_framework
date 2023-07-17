@@ -93,9 +93,9 @@ def setupMenu():
     print(" [wr]   - run web repl")
     print(" [ftp]  - start FTP")
     print('-' * 32)
-    print(" [mo]   - mip octopus - update octopus Framework")
-    print(" [me]   - mip examples > download mip examples/...")
-    print(" [ms]   - mip shell > install uPyShell")
+    print(" [ou]   - octopus update (octopusLAB Framework)")
+    print(" [oe]   - octopus examples > download mip examples/...")
+    print(" [os]   - octopus shell > install uPyShell")
     #print(" [sd]   - system download > stable octopus modules from URL")
     #print(" [sdg]  - system download > Micro-GUI library")
     #print(" [sde]  - system download > examples (from URL) /[sdh] hydroponics")
@@ -239,19 +239,19 @@ def setup():
             # io menu
             ioMenu()
 
-        if sele == "mo":
+        if sele == "ou":
             print("mip update > octopus Framework")
             import mip
             # io menu
             mip.install("github:octopuslab-cz/esp32_micropython_framework", target=".")
             
-        if sele == "me":
+        if sele == "oe":
             print("load mip examples")
             import mip
             # io menu
             mip.install("github:octopuslab-cz/esp32_micropython_framework/examples", target=".")
             
-        if sele == "ms":
+        if sele == "os":
             print("--> [micropython-shell - 2022]")
             import mip
             mip.install("github:octopusengine/micropython-shell/mip_pkg_mpy_22", target=".")
