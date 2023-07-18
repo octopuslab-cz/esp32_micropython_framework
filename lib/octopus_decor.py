@@ -1,10 +1,11 @@
+# (c) OctopusLAB 2017-23 - MIT
 # this module is "decorators" library for Octopus FrameWork
 
-__version__ = "1.0.3" # 2022/10
+__version__ = "1.0.3"
 
 """
 usage:
-from utils.octopus_decor import octopus_duration, octopus_debug
+from octopus_decor import octopus_duration, octopus_debug
 @octopus_duration
 def yourFunc(): ...
 """

@@ -8,11 +8,6 @@ def setup():
     import utils.setup
     utils.setup.setup()
 
-def octopus():
-    import utils.octopus
-    utils.octopus.octopus()
-    return utils.octopus
-
 def reset():
     from machine import reset
     reset()

@@ -1,12 +1,12 @@
 # library for pwm servo
-# octopusLAB 2019
+# (c) OctopusLAB 2017-23
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 from time import sleep
 from machine import Pin, PWM
 from utils import pinout
-from utils.octopus_lib import map
+from lib.octopus_lib import map
 
 SERVO_MIN = 45
 PWM_CENTER = 60

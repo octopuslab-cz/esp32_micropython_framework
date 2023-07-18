@@ -1,7 +1,7 @@
 # Example/Test I2C LCD display
 # (c) OctopusLAB 2017-23 - MIT
 
-from utils.octopus_lib import i2c_init
+from octopus_lib import i2c_init
 
 print("[--- init ---] I2C ")
 i2c = i2c_init()

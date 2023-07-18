@@ -5,7 +5,7 @@ from time import sleep
 from machine import Pin, SPI
 from components.display8 import Display8
 from utils.pinout import set_pinout
-from utils.octopus_lib import spi_init
+from octopus_lib import spi_init
 
 
 print("[--- init ---] SPI")

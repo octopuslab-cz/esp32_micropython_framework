@@ -1,15 +1,13 @@
-#  octopus lab serial arduino tft display 320x240px - 2016-21
-# use:
+# (c) OctopusLAB 2015-23 - MIT
+# octopus lab serial arduino tft display 320x240px - 2016-21
 # from uart_display import display_row, display_start, display_point
 
-__version__ = "1.0.0"
+__version__ = "1.0.2"
 
 
 from time import sleep_ms
 from machine import UART
-from utils.octopus_decor import octopus_duration
 
-DEBUG = False
 
 # uart = UART(2, 115200)   # UART2 > # U2TXD(SERVO1/PWM1_PIN 17)
 # hooka UART: Tx 4, Rx 36
@@ -22,7 +20,6 @@ gymax = 210
 gymin = 139
 
 
-@octopus_duration(DEBUG)
 def display_row(r,txt,color=1):
     u = uart
     u.write('R')
@@ -36,7 +33,6 @@ def display_row(r,txt,color=1):
     sleep_ms(gms)
 
 
-@octopus_duration(DEBUG)
 def display_point(x,y,color):
     u = uart
     u.write('W')
@@ -51,7 +47,6 @@ def display_point(x,y,color):
     sleep_ms(gms)
 
 
-@octopus_duration(DEBUG)
 def display_start(ver):
     uart.write('C')      # test quick clear display
     #uart.write('R0W1')   # row 0 (first)

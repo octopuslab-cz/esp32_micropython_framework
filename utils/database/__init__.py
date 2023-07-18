@@ -1,11 +1,10 @@
+# (c) OctopusLAB 2016-23 - MIT
 """
 octopusLAB - database class
-
 """
 
 __version__ = "1.0.1"
 
-from utils.octopus_lib import printTitle
 
 
 class Database():
