@@ -1,9 +1,10 @@
 # ws_rgb_patterns (RGB: WS2812)
-# octopusLab - 2022/10/08
+# (c) OctopusLAB 2016-23 - MIT
 
-from time import sleep
+from time import sleep, sleep_ms
 import random
 
+__version__ = "2.0.1"
 
 # todo: ws_init()
 
@@ -46,8 +47,8 @@ def ws_RGB_test(ws,delay=0.3,intensity=30):
     sleep(delay)
 
 
-def rgb_gradient(ws_rgb,m=1,s=0,d=3,num=32): # m:multiplik / s:offset / d:intensity div.
-    for i in range(num):
+def rgb_gradient(ws_rgb,m=2,s=0,d=3,ws_max=32): # m:multiplik / s:offset / d:intensity div.
+    for i in range(ws_max):
         ws_rgb.color(wheel(i*m+s,d),i)  
 
 
@@ -59,8 +60,8 @@ def rgb_fill(ws_rgb,color,start=0,stop=32):
             print("Err.index")
 
 
-def ws_clear_all(ws_rgb):
-    rgb_fill(ws_rgb, (0,0,0))
+def ws_clear_all(ws_rgb,stop=32):
+    rgb_fill(ws_rgb, (0,0,0),stop=stop)
 
 
 def rgb_fill_round(ws_rgb, num_ws, offset=0, c1=((100,0,0)), c2=((0,0,100))):
@@ -81,18 +82,18 @@ def rgb_fill_round(ws_rgb, num_ws, offset=0, c1=((100,0,0)), c2=((0,0,100))):
     #print("------- ws -------",h.NUM_WS,h.NUM_WS/2)
     #print(offset)
     #print("------------------")
-        
+
     
-def pattern_noise(col=(0,100,0),num=8, speed_delay=100):
+def pattern_noise(col=(0,100,0),num=8, speed_delay=100,ws_max=32):
     rndloop = random.randint(0,num)
     for i in range(rndloop):
-        rndnum = random.randint(0,WSMAX-1)
+        rndnum = random.randint(0,ws_max-1)
         ri = random.randint(1,100) # random intensity
-        rndcoli = (int(col[0]/ri),int(col[1]/ri),int(col[2]/ri))
-        # print(ri,rndcoli)
-        ws.color(rndcoli,rndnum)
+        rndcoli = ((int(col[0]/ri),int(col[1]/ri),int(col[2]/ri)))
+        print(ri,rndcoli)
+        #ws.color(rndcoli,rndnum)
     sleep_ms(speed_delay)
-    ws_clear_all()
+    ws_clear_all(stop=ws_max)
     
 
 """
