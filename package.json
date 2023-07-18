@@ -17,7 +17,7 @@
   ["components/display8/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display8/__init__.py"],
   ["components/display_i2c_lcd/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_lcd/__init__.py"],
   ["components/display_i2c_lcd/lcd_api.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_lcd/lcd_api.py"],
-  ["components/oled/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/oled/__init__.py"],
+  ["components/display_i2c_oled/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_oled/__init__.py"],
   ["components/i2c_expander/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/i2c_expander/__init__.py"],
   ["components/buzzer/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/__init__.py"],	
   ["components/buzzer/melody.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/melody.py"],
@@ -25,6 +25,7 @@
   ["components/servo/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/servo/__init__.py"],
   ["components/ds18b20.py", "github:octopuslab-cz/esp32_micropython_framework/components/ds18b20.py"],
   ["components/mpu6050.py", "github:octopuslab-cz/esp32_micropython_framework/components/mpu6050.py"],
+  ["components/display_segment.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_segment.py"],
     
   ["lib/octopus_decor.py", "github:octopuslab-cz/esp32_micropython_framework/lib/octopus_decor.py"],
   ["lib/octopus_lib.py", "github:octopuslab-cz/esp32_micropython_framework/lib/octopus_lib.py"],
