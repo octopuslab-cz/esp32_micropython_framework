@@ -6,11 +6,11 @@ e8 = Expander8(addr) addr default 000 > 0x20
 e8.test()
 """
 
-__version__ = "1.1.1"
+__version__ = "2.0.2"
 
 from time import sleep_ms
 from micropython import const
-from utils.bits import neg, reverse, set_bit, get_bit
+from octopus_digital import neg, reverse, set_bit, get_bit
 
 DEFAULT_ADDRESS = 0x20
 
