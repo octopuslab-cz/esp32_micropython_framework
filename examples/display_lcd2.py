@@ -15,4 +15,4 @@ from components.display_i2c_lcd import I2cLcd
 lcd = I2cLcd(i2c, 39, 2, 16) # addr, rows, col
 lcd.putstr("octopusLab") # write text
 
-print("[-- finish --]")
+print("[-- finish --]\n")

@@ -29,4 +29,4 @@ sleep_ms(1000)
 # oled.clear()
      
 threeDigits(oled,123)
-print("[-- finish --]")
+print("[-- finish --]\n")

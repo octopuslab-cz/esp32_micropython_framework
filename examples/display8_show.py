@@ -26,6 +26,7 @@ for i in range(7):
 d8.write_to_buffer('octopus')
 d8.display()
 
+print("[-- finish --]\n")
 
 
 

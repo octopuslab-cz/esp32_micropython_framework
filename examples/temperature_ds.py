@@ -16,7 +16,7 @@ print(f"{temp}°C")
 # print(test)
 
 print("multi",tt.get_temp_n())
-print("[-- finish --]")
+print("[-- finish --]\n")
 
 # ----------------------------------------
 # [--- init ---] ds18b20

@@ -13,4 +13,4 @@ for blink in range(3):
     led.value(0)
     sleep_ms(500)
 
-print("[-- finish --]")
+print("[-- finish --]\n")

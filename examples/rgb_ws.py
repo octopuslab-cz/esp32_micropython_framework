@@ -24,4 +24,4 @@ rgb.simpleTest()
 rgb.rainbow_cycle()
 rgb.color((0,0,0))
 
-print("[-- finish --]")
+print("[-- finish --]\n")

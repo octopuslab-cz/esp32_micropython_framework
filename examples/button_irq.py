@@ -1,4 +1,4 @@
-# octopusLAB simple example
+# (c) OctopusLAB 2016-23 - MIT
 # HW: ESP32board + button 0 (boot) / IRQ (interupt) 
 
 from components.led import Led

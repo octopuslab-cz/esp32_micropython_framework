@@ -18,4 +18,4 @@ for fade in range(3):
     p.duty(0)
     sleep_ms(200)
     
-print("[-- finish --]")
+print("[-- finish --]\n")

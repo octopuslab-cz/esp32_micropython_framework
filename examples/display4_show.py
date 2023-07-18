@@ -15,4 +15,4 @@ for i in range(7):
     sleep(0.3)
 
 tm.show('abcd')
-print("[-- finish --]")
+print("[-- finish --]\n")
