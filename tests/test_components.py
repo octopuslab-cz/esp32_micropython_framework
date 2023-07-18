@@ -1,8 +1,16 @@
-from time import sleep_ms
-from components.led import Led
+# (c) OctopusLAB 2016-23 - MIT
 
-print("components.led -> blink()")
-led = Led(2)
-led.blink()
+try:
+    import examples.led_class
+except:
+    print("[ Error ] led_class")
 
-print("...")
+try:
+    import examples.pwm
+except:
+    print("[ Error ] pwm")
+
+try:
+    import examples.display_oled
+except:
+    print("[ Error ] display_oled")
