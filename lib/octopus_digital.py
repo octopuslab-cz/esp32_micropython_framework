@@ -3,7 +3,7 @@
 
 from micropython import const
 
-__version__ = "2.0.0" # 2022/10
+__version__ = "2.0.1" # 2022/10
 
 """
 # bits
@@ -30,7 +30,7 @@ num_to_bytes2(255)                >>> bytearray(b'\x00\xff')
 num_to_bytes2(0b1111111111111111) >>> bytearray(b'\xff\xff')
 num_to_hex_str4(1325)             >>> '052d'
 num_to_hex_str2(i)
-
+"""
 # basic library - bits operations - for bool and 8bit expander
 
 bar = (
@@ -81,7 +81,7 @@ str(hex(b[0]))[2:]  # "ff"
 
 b = b'abc'
 b.decode('utf-8')
-"""
+
 
 # num_to_bytes(reverse(b1))   >   '10011111'
 
