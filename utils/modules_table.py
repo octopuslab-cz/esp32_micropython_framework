@@ -19,6 +19,14 @@ def print_ver(module,subdir="components."):
     
 # print(get_ver("led"))
 print("-"*LW)
+print_ver("octopus_lib","lib.")
+print_ver("octopus_decor","lib.")
+print_ver("octopus_digital","lib.")
+print_ver("octopus_transform","lib.")
+print_ver("octopus_api","lib.")
+print_ver("pubsub","lib.")
+
+print("-"*LW)
 print_ver("led")
 print_ver("button")
 print_ver("ws_rgb")
@@ -37,14 +45,9 @@ print("-"*LW)
 print_ver("","config.")
 
 print("-"*LW)
-print_ver("octopus_lib","utils.")
-print_ver("octopus_decor","utils.")
-print_ver("octopus_digital","utils.")
-print_ver("octopus_api","utils.")
 print_ver("pinout","utils.")
 print_ver("setup","utils.")
 print_ver("sys_info","utils.")
-print_ver("transform","utils.")
 print_ver("wifi_connect","utils.")
 
 # import components.display7 as display7
