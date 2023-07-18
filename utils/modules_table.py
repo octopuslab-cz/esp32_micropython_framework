@@ -42,7 +42,7 @@ print_ver("octopus_decor","lib.")
 print_ver("octopus_digital","lib.")
 print_ver("octopus_api","lib.")
 print_ver("pubsub","lib.")
-print_ver("ftp","lib.")
+
 
 print("-"*LW)
 print_ver("pinout","utils.")

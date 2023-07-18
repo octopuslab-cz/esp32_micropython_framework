@@ -1,6 +1,6 @@
 # this module is "decorators" library for Octopus FrameWork
 
-__version__ = "0.0.3" # 2022/10
+__version__ = "1.0.3" # 2022/10
 
 """
 usage:

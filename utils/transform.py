@@ -1,6 +1,6 @@
 # octopusLAB - basic lib. transform math
 
-__version__ = "0.0.5"
+__version__ = "1.0.5"
 
 """
 inspir: https://github.com/aquila12/me-arm-ik
