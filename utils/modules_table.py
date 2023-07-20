@@ -1,5 +1,7 @@
 # (c) OctopusLAB 2017-23 - MIT
 
+import gc
+
 LW=29 # LEFT_WIDTH
 
 
@@ -27,6 +29,7 @@ print_ver("octopus_digital","lib.")
 print_ver("octopus_transform","lib.")
 print_ver("octopus_api","lib.")
 print_ver("pubsub","lib.")
+gc.collect()
 
 print("-"*LW)
 print_ver("led")
@@ -43,6 +46,7 @@ print_ver("display_i2c_oled")
 print_ver("display_serial")
 print_ver("ds18b20")
 print_ver("i2c_eeprom_24xxx")
+gc.collect()
 
 print("-"*LW)
 print_ver("","config.")
@@ -52,6 +56,7 @@ print_ver("pinout","utils.")
 print_ver("setup","utils.")
 print_ver("sys_info","utils.")
 print_ver("wifi_connect","utils.")
+gc.collect()
 
 # import components.display7 as display7
 # print("{:<{width}}{}".format("components.display7", display7.__version__, width=LW))
