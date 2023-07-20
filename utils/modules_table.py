@@ -2,6 +2,7 @@
 
 LW=29 # LEFT_WIDTH
 
+
 def get_ver(module,subdir="components."):
     try:
         imported_module = __import__(subdir + module)
@@ -13,6 +14,7 @@ def get_ver(module,subdir="components."):
     import components.led as led
     print("{:<{width}}{}".format("components.led", led.__version__, width=LW))
 """
+
     
 def print_ver(module,subdir="components."):
     print("{:<{width}}{}".format(f"{subdir}{module}", get_ver(module,subdir), width=LW))
@@ -38,8 +40,8 @@ print_ver("display4")
 print_ver("display8")
 print_ver("display_i2c_lcd")
 print_ver("display_i2c_oled")
+print_ver("display_serial")
 print_ver("ds18b20")
-print_ver("uart_display")
 print_ver("i2c_eeprom_24xxx")
 
 print("-"*LW)

@@ -17,7 +17,8 @@
   ["components/display8/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display8/__init__.py"],
   ["components/display_i2c_lcd/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_lcd/__init__.py"],
   ["components/display_i2c_lcd/lcd_api.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_lcd/lcd_api.py"],
-  ["components/display_i2c_oled/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_oled/__init__.py"],
+  ["components/display_i2c_oled/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_serial/__init__.py"],
+  ["components/display_serial/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_i2c_oled/__init__.py"],
   ["components/i2c_expander/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/i2c_expander/__init__.py"],
   ["components/buzzer/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/__init__.py"],	
   ["components/buzzer/melody.py", "github:octopuslab-cz/esp32_micropython_framework/components/buzzer/melody.py"],
@@ -56,5 +57,5 @@
   ],
   "deps": [
   ],
-  "version": "2.0.6"
+  "version": "2.0.7"
 }
