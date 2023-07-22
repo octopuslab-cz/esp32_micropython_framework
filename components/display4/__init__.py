@@ -1,79 +1,31 @@
 """
-Based on:
 MicroPython TM1637 quad 7-segment LED display driver
 https://github.com/mcauser/micropython-tm1637
 Copyright (c) 2016 Mike Causer | MIT License
 """
 __version__ = "2.0.1"
 
-from machine import Pin
 from micropython import const
+from machine import Pin
 from time import sleep_us, sleep_ms
-from ..pinout import PIN_DISPLAY_CLK, PIN_DISPLAY_DIO
+# from ..pinout import PIN_DISPLAY_CLK, PIN_DISPLAY_DIO
+PIN_DISPLAY_CLK, PIN_DISPLAY_DIO = 18, 19
 
 TM1637_CMD1 = const(64)  # 0x40 data command
-TM1637_CMD2 = const(192)  # 0xC0 address command
-TM1637_CMD3 = const(128)  # 0x80 display control command
-TM1637_DSP_ON = const(8)  # 0x08 display on
-TM1637_DELAY = const(10)  # 10us delay between clk/dio pulses
+TM1637_CMD2 = const(192) # 0xC0 address command
+TM1637_CMD3 = const(128) # 0x80 display control command
+TM1637_DSP_ON = const(8) # 0x08 display on
+TM1637_DELAY = const(10) # 10us delay between clk/dio pulses
 TM1637_MSB = const(128)  # msb is the decimal point or the colon depending on your display
 
-_CHARACTER_SEGMENTS = {
-    '0': 0b00111111,
-    '1': 0b00000110,
-    '2': 0b01011011,
-    '3': 0b01001111,
-    '4': 0b01100110,
-    '5': 0b01101101,
-    '6': 0b01111101,
-    '7': 0b00000111,
-    '8': 0b01111111,
-    '9': 0b01101111,
-    'a': 0b01110111,
-    'b': 0b01111100,
-    'c': 0b00111001,
-    'd': 0b01011110,
-    'e': 0b01111001,
-    'f': 0b01110001,
-    'g': 0b00111101,
-    'h': 0b01110110,
-    'i': 0b00000110,
-    'j': 0b00011110,
-    'k': 0b01110110,
-    'l': 0b00111000,
-    'm': 0b01010101,
-    'n': 0b01010100,
-    'o': 0b00111111,
-    'p': 0b01110011,
-    'q': 0b01100111,
-    'r': 0b01010000,
-    's': 0b01101101,
-    't': 0b01111000,
-    'u': 0b00111110,
-    'v': 0b00011100,
-    'w': 0b00101010,
-    'x': 0b01110110,
-    'y': 0b01101110,
-    'z': 0b01011011,
-    ' ': 0b00000000,
-    '-': 0b01000000,
-    '*': 0b01100011,
-    '.': 0b10000000,
-}
+# 0-9, a-z, blank, dash, star
+_SEGMENTS = bytearray(b'\x3F\x06\x5B\x4F\x66\x6D\x7D\x07\x7F\x6F\x77\x7C\x39\x5E\x79\x71\x3D\x76\x06\x1E\x76\x38\x55\x54\x3F\x73\x67\x50\x6D\x78\x3E\x1C\x2A\x76\x6E\x5B\x00\x40\x63')
 
-_UNKNOWN_CHARACTER = _CHARACTER_SEGMENTS['*']
-
-# swap segments to make it upsidedown
-_UP_DOWN_TRANSFORMER = [0, 1, 5, 6, 7, 2, 3, 4]
-_DISPLAY_LIMIT = 4
-
-
-class Display(object):
+class TM1637(object):
     """Library for quad 7-segment LED modules based on the TM1637 LED driver."""
-
     def __init__(self, clk=PIN_DISPLAY_CLK, dio=PIN_DISPLAY_DIO, brightness=7):
-        self.clk = Pin(clk)
-        self.dio = Pin(dio)
+        self.clk = clk
+        self.dio = dio
 
         if not 0 <= brightness <= 7:
             raise ValueError("Brightness out of range")
@@ -86,11 +38,13 @@ class Display(object):
         self._write_data_cmd()
         self._write_dsp_ctrl()
 
+
     def _start(self):
         self.dio(0)
         sleep_us(TM1637_DELAY)
         self.clk(0)
         sleep_us(TM1637_DELAY)
+
 
     def _stop(self):
         self.dio(0)
@@ -99,17 +53,20 @@ class Display(object):
         sleep_us(TM1637_DELAY)
         self.dio(1)
 
+
     def _write_data_cmd(self):
         # automatic address increment, normal mode
         self._start()
         self._write_byte(TM1637_CMD1)
         self._stop()
 
+
     def _write_dsp_ctrl(self):
         # display on, set brightness
         self._start()
         self._write_byte(TM1637_CMD3 | TM1637_DSP_ON | self._brightness)
         self._stop()
+
 
     def _write_byte(self, b):
         for i in range(8):
@@ -126,6 +83,7 @@ class Display(object):
         self.clk(0)
         sleep_us(TM1637_DELAY)
 
+
     def brightness(self, val=None):
         """Set the display brightness 0-7."""
         # brightness 0 = 1/16th pulse width
@@ -138,6 +96,7 @@ class Display(object):
         self._brightness = val
         self._write_data_cmd()
         self._write_dsp_ctrl()
+
 
     def write(self, segments, pos=0):
         """Display up to 6 segments moving right from a given position.
@@ -154,164 +113,122 @@ class Display(object):
         self._stop()
         self._write_dsp_ctrl()
 
+
+    def encode_digit(self, digit):
+        """Convert a character 0-9, a-f to a segment."""
+        return _SEGMENTS[digit & 0x0f]
+
+
+    def encode_string(self, string):
+        """Convert an up to 4 character length string containing 0-9, a-z,
+        space, dash, star to an array of segments, matching the length of the
+        source string."""
+        segments = bytearray(len(string))
+        for i in range(len(string)):
+            segments[i] = self.encode_char(string[i])
+        return segments
+
+
+    def encode_char(self, char):
+        """Convert a character 0-9, a-z, space, dash or star to a segment."""
+        o = ord(char)
+        if o == 32:
+            return _SEGMENTS[36] # space
+        if o == 42:
+            return _SEGMENTS[38] # star/degrees
+        if o == 45:
+            return _SEGMENTS[37] # dash
+        if o >= 65 and o <= 90:
+            return _SEGMENTS[o-55] # uppercase A-Z
+        if o >= 97 and o <= 122:
+            return _SEGMENTS[o-87] # lowercase a-z
+        if o >= 48 and o <= 57:
+            return _SEGMENTS[o-48] # 0-9
+        raise ValueError("Character out of range: {:d} '{:s}'".format(o, chr(o)))
+
+
     def hex(self, val):
         """Display a hex value 0x0000 through 0xffff, right aligned."""
         string = '{:04x}'.format(val & 0xffff)
         self.write(self.encode_string(string))
 
+
+    def number(self, num):
+        """Display a numeric value -999 through 9999, right aligned."""
+        # limit to range -999 to 9999
+        num = max(-999, min(num, 9999))
+        string = '{0: >4d}'.format(num)
+        self.write(self.encode_string(string))
+
+
+    def numbers(self, num1, num2, colon=True):
+        """Display two numeric values -9 through 99, with leading zeros
+        and separated by a colon."""
+        num1 = max(-9, min(num1, 99))
+        num2 = max(-9, min(num2, 99))
+        segments = self.encode_string('{0:0>2d}{1:0>2d}'.format(num1, num2))
+        if colon:
+            segments[1] |= 0x80 # colon on
+        self.write(segments)
+
+
     def temperature(self, num):
         if num < -9:
-            self.show('lo')  # low
+            self.show('lo') # low
         elif num > 99:
-            self.show('hi')  # high
+            self.show('hi') # high
         else:
             string = '{0: >2d}'.format(num)
             self.write(self.encode_string(string))
-        self.write([_SEGMENTS[38], _SEGMENTS[12]], 2)  # degrees C
+        self.write([_SEGMENTS[38], _SEGMENTS[12]], 2) # degrees C
+
+
+    def show(self, string, colon=False):
+        segments = self.encode_string(string)
+        if len(segments) > 1 and colon:
+            segments[1] |= 128
+        self.write(segments[:4])
+
+
+    def show_right(self, value):
+        # write temperature on most right postition on the display
+        disp_list = [" ", " ", " ", " ", " "]
+        value_str = str(value)[0:5] # trim in case of more than 5 chars (one for decimal point)
+        # use negative index to access characters from the last
+        for i in range(1, len(value_str)+1):
+            disp_list[-i] = value_str[-i]
+
+        self.show("".join(disp_list))
+
 
     def scroll(self, string, delay=250):
         segments = string if isinstance(string, list) else self.encode_string(string)
         data = [0] * 8
         data[4:0] = list(segments)
         for i in range(len(segments) + 5):
-            self.write(data[0 + i:4 + i])
+            self.write(data[0+i:4+i])
             sleep_ms(delay)
 
-    def clear(self):
-        self.write([0, 0, 0, 0])
 
-    def write_char(self, char, pos=0):
-        self.write([_CHARACTER_SEGMENTS[char]], pos)
+class TM1637Decimal(TM1637):
+    """Library for quad 7-segment LED modules based on the TM1637 LED driver.
 
-    # max 1 byte
-    # bits moving
-    # 0bzzyyyxxx -> 0bzzxxxyyy
-    @staticmethod
-    def transform_upsidedown(val):
-        bit_str = "{0:08b}".format(val)
-        result = list("00000000")
-        for i in range(len(bit_str)):
-            result[_UP_DOWN_TRANSFORMER[i]] = bit_str[i]
-        return int('0b' + "".join(result))
+    This class is meant to be used with decimal display modules (modules
+    that have a decimal point after each 7-segment LED).
+    """
 
-    @staticmethod
-    def _convert_string(string, scroll):
-        if scroll:
-            return string.lower()
-        last_char = ''
-        n = 0
+    def encode_string(self, string):
+        """Convert a string to LED segments.
 
-        for c in string:
-            if c == '.' and last_char != '.':
+        Convert an up to 4 character length string containing 0-9, a-z,
+        space, dash, star and '.' to an array of segments, matching the length of
+        the source string."""
+        segments = bytearray(len(string.replace('.','')))
+        j = 0
+        for i in range(len(string)):
+            if string[i] == '.' and j > 0:
+                segments[j-1] |= TM1637_MSB
                 continue
-            n += 1
-            if n == _DISPLAY_LIMIT:
-                break
-
-        return string[:n - 1]
-
-    @staticmethod
-    def _convert_boolean(boolean, scroll):
-        if scroll:
-            return str(boolean).lower()
-
-        return 'true' if boolean else 'fals'
-
-    @staticmethod
-    def _convert_integer(integer, scroll):
-        if not scroll and not (- 10 ** _DISPLAY_LIMIT - 1) <= integer <= (10 ** _DISPLAY_LIMIT - 1):
-            raise ValueError('Number has too much digits and scrolling is disabled')
-
-        return str(integer)
-
-    # todo
-    @staticmethod
-    def _convert_float(num, scroll):
-        pass
-
-    _TYPES_CONVERTERS = {
-        str: lambda v, _: v.lower(),
-        bool: _convert_boolean,
-        int: _convert_integer,
-        float: _convert_float,
-    }
-
-    @staticmethod
-    def encode_string(string):
-        segments = []
-
-        for char in string:
-            if char == '.':
-                if len(segments) > 0:
-                    segments[-1] = segments[-1] + _CHARACTER_SEGMENTS['.']
-                    continue
-
-            try:
-                s = _CHARACTER_SEGMENTS[char]
-            except KeyError:
-                s = _UNKNOWN_CHARACTER
-
-            segments.append(s)
-
+            segments[j] = self.encode_char(string[i])
+            j += 1
         return segments
-
-    """
-    Show value on display
-
-    :param value: Value to display (str, bool, int, floar, None)
-    :param alignment: True - right, False - left
-    :param orientation: True - up, False - down
-    :param scroll: Show overflowing text by scrolling
-    :param delay: int - delay between scroll segment change 
-    :return: None
-    """
-
-    def show(self, value, alignment=True, orientation=True, scroll=True, delay=250):
-        val_type = type(value)
-
-        if val_type not in Display._TYPES_CONVERTERS.keys():
-            raise ValueError(f'Invalid value type: "{str(val_type)}"')
-
-        if not isinstance(alignment, bool):
-            raise ValueError(f'Parameter "aligment" must be type boolean')
-
-        if not isinstance(scroll, bool):
-            raise ValueError(f'Parameter "scroll" must be type boolean')
-
-        if not isinstance(delay, int) or delay <= 0:
-            raise ValueError(f'Parameter "delay" must be integer greater than 0')
-
-        if value is None:
-            value = 'none'
-
-        converter = Display._TYPES_CONVERTERS[type(value)]
-
-        encoded = Display.encode_string(converter(value, scroll))
-
-        if not orientation:
-            encoded.reverse()
-            encoded = [Display.transform_upsidedown(e) for e in encoded]
-
-        if len(encoded) < _DISPLAY_LIMIT:
-            # also turns off not used segments
-            add = (_DISPLAY_LIMIT - len(encoded)) * [0]
-
-            if alignment:
-                encoded = add + encoded
-            else:
-                encoded += add
-
-        if scroll:
-            encoded = (_DISPLAY_LIMIT * [0]) + encoded + (_DISPLAY_LIMIT * [0])
-            length = len(encoded)
-
-            for i in range(length):
-                if orientation:
-                    self.write(encoded[i:_DISPLAY_LIMIT + i])
-                else:
-                    self.write(encoded[length - i - _DISPLAY_LIMIT: length - i])
-                sleep_ms(delay)
-
-        else:
-            self.write(encoded)
-
