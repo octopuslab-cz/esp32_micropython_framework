@@ -10,6 +10,8 @@
   ["examples/display_oled.py", "github:octopuslab-cz/esp32_micropython_framework/examples/display_oled.py"],
   ["examples/temperature_ds.py", "github:octopuslab-cz/esp32_micropython_framework/examples/temperature_ds.py"],
   ["examples/display_lcd2.py", "github:octopuslab-cz/esp32_micropython_framework/examples/display_lcd2.py"],
+  ["examples/eeprom_i2c.py", "github:octopuslab-cz/esp32_micropython_framework/examples/eeprom_i2c.py"],
+    
   ],
   "deps": [
   ],
