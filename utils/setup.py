@@ -22,6 +22,7 @@ devices = [
 ["ESP32board1", "esp32"],
 ["PLCshield","esp32"],
 ["WeMos OLED","esp32"],
+["ESP32C3board","esp32c3"]
 ]
 
 octopusASCII = [

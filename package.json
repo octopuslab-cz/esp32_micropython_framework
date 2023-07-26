@@ -49,12 +49,14 @@
 
   ["pinouts/base.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/base.py"],
   ["pinouts/esp32_base.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_base.py"],
+  ["pinouts/esp32c3_base.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32c3_base.py"],
   ["pinouts/esp32_default.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_default.py"],
   ["pinouts/esp32_doit_adapter.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_doit_adapter.py"],
   ["pinouts/esp32_esp32_board1.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_esp32_board1.py"],
   ["pinouts/esp32_robot_board1.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_robot_board1.py"],
   ["pinouts/esp32_hooka.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_hooka.py"],
   ["pinouts/esp32_plc_shield.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_plc_shield.py"],
+  ["pinouts/esp32c3_esp32c3_board.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32c3_esp32c3_board.py"]
   ],
   "deps": [
   ],

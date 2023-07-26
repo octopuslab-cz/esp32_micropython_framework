@@ -60,6 +60,9 @@ def set_pinout():
     if device_config.get('board_type') == "PLCshield" and device_config.get('soc_type') == "esp32":
         import pinouts.esp32_plc_shield as pinout
 
+    if device_config.get('board_type') == "ESP32C3board" and device_config.get('soc_type') == "esp32c3":
+        import pinouts.esp32c3_esp32c3_board as pinout
+
     return pinout
 
 
