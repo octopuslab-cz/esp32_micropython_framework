@@ -1,15 +1,15 @@
 # (c) OctopusLAB 2016-23 - MIT
-#  octopus lab serial arduino tft display 320x240px - 2016-21
+# Octopus lab serial arduino tft display 320x240px - 2015-22
+
 # from components.display_serial import display_row, display_start, display_point
 
-__version__ = "2.0.1"
+__version__ = "2.0.2"
 
 
 from time import sleep_ms
 from machine import UART
 from octopus_decor import octopus_duration
 
-DEBUG = False
 
 # uart = UART(2, 115200)   # UART2 > # U2TXD(SERVO1/PWM1_PIN 17)
 # hooka UART: Tx 4, Rx 36
@@ -22,7 +22,6 @@ gymax = 210
 gymin = 139
 
 
-@octopus_duration(DEBUG)
 def display_row(r,txt,color=1):
     u = uart
     u.write('R')
@@ -36,8 +35,7 @@ def display_row(r,txt,color=1):
     sleep_ms(gms)
 
 
-@octopus_duration(DEBUG)
-def display_point(x,y,color):
+def display_point(x,y,color=2):
     u = uart
     u.write('W')
     u.write(str(color))
@@ -51,13 +49,12 @@ def display_point(x,y,color):
     sleep_ms(gms)
 
 
-@octopus_duration(DEBUG)
-def display_start(ver):
+def display_start(msg="octopusLAB | test"):
     uart.write('C')      # test quick clear display
     #uart.write('R0W1')   # row 0 (first)
     #uart.write('QoctopusLAB ESP32 hooka2.1*')
-    display_row(0,"octopusLAB hooka2 v:"+ver,1)
+    display_row(0, msg,1)
     
     uart.write('h30')
-    uart.write('W7h'+str(gymin-1))
+    # uart.write('W7h'+str(gymin-1))
     uart.write('W7h'+str(gymax+1))
