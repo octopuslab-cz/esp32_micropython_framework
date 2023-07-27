@@ -28,6 +28,7 @@
   ["components/ds18b20.py", "github:octopuslab-cz/esp32_micropython_framework/components/ds18b20.py"],
   ["components/mpu6050.py", "github:octopuslab-cz/esp32_micropython_framework/components/mpu6050.py"],
   ["components/display_segment.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_segment.py"],
+ 
     
   ["lib/octopus_decor.py", "github:octopuslab-cz/esp32_micropython_framework/lib/octopus_decor.py"],
   ["lib/octopus_lib.py", "github:octopuslab-cz/esp32_micropython_framework/lib/octopus_lib.py"],
@@ -38,6 +39,7 @@
   ["lib/pubsub.py", "github:octopuslab-cz/esp32_micropython_framework/lib/pubsub.py"],
   ["lib/uping.py", "github:octopuslab-cz/esp32_micropython_framework/lib/uping.py"],
   ["lib/ssd1306.py", "github:octopuslab-cz/esp32_micropython_framework/lib/ssd1306.py"],
+  ["lib/mpu6500.py", "github:octopuslab-cz/esp32_micropython_framework/lib/mpu6500.py"],
 
   ["utils/setup.py", "github:octopuslab-cz/esp32_micropython_framework/utils/setup.py"],
   ["utils/modules_table.py", "github:octopuslab-cz/esp32_micropython_framework/utils/modules_table.py"],
