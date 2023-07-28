@@ -9,8 +9,8 @@
   ["lib/blesync_uart/server.py", "github:octopuslab-cz/esp32_micropython_framework/lib/blesync_uart/server.py"],
   
   ["utils/ble/bleuart.py", "github:octopuslab-cz/esp32_micropython_framework/utils/ble/bleuart.py"],
-  ["utils/ble/blefruit.py", "github:octopuslab-cz/esp32_micropython_framework/utils/ble/blefruit.py"],
-
+  ["utils/ble/bluefruit.py", "github:octopuslab-cz/esp32_micropython_framework/utils/ble/bluefruit.py"],
+              
   ["examples/ble_led.py", "github:octopuslab-cz/esp32_micropython_framework/examples/ble_led.py"],
   
   ],
