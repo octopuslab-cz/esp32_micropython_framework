@@ -1,0 +1,20 @@
+{
+  "urls": [
+
+  ["lib/blesync.py", "github:octopuslab-cz/esp32_micropython_framework/lib/blesync.py"],
+  ["lib/blesync_client.py", "github:octopuslab-cz/esp32_micropython_framework/lib/blesync_client.py"],
+  ["lib/blesync_server.py", "github:octopuslab-cz/esp32_micropython_framework/lib/blesync_server.py"],
+  ["lib/blesync_uart/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/lib/blesync_uart/__init__.py"], 
+  ["lib/blesync_uart/client.py", "github:octopuslab-cz/esp32_micropython_framework/lib/blesync_uart/client.py"],
+  ["lib/blesync_uart/server.py", "github:octopuslab-cz/esp32_micropython_framework/lib/blesync_uart/server.py"],
+  
+  ["utils/ble/bleuart.py", "github:octopuslab-cz/esp32_micropython_framework/utils/ble/bleuart.py"],
+  ["utils/ble/blefruit.py", "github:octopuslab-cz/esp32_micropython_framework/utils/ble/blefruit.py"],
+
+  ["examples/ble_led.py", "github:octopuslab-cz/esp32_micropython_framework/examples/ble_led.py"],
+  
+  ],
+  "deps": [
+  ],
+  "version": "2.0.0"
+}
