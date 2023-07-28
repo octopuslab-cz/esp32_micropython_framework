@@ -7,8 +7,6 @@ from pinouts.esp32_base import *
 
 # PIN as on octopusLAB LAN board 1 with built-in ESP32
 
-HALL_SENSOR = const(8)
-
 #I2C:
 I2C_SCL_PIN = const(16)
 I2C_SDA_PIN = const(2)
