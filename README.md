@@ -9,12 +9,15 @@ Since MicroPython *ver. 1.20*, new libraries are already being created here, as 
 
 ## 2023 - support to mip package manager
 
-```
+```Python
 import mip
 mip.install("github:octopuslab-cz/esp32_micropython_framework", target="/")
 
 # install examples
 mip.install("github:octopuslab-cz/esp32_micropython_framework/examples", target="/")
+
+# adding BLE support
+mip.install("github:octopuslab-cz/esp32_micropython_framework/package_ble.json", target="/")
 ```
 
 ## 2022 - micropython-octopuslab-installer
