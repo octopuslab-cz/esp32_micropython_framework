@@ -40,7 +40,7 @@
   ["lib/uping.py", "github:octopuslab-cz/esp32_micropython_framework/lib/uping.py"],
   ["lib/ssd1306.py", "github:octopuslab-cz/esp32_micropython_framework/lib/ssd1306.py"],
   ["lib/mpu6500.py", "github:octopuslab-cz/esp32_micropython_framework/lib/mpu6500.py"],
-  ["lib/web_server.py", "github:octopuslab-cz/esp32_micropython_framework/lib/web_server.py"],
+  ["lib/web.py", "github:octopuslab-cz/esp32_micropython_framework/lib/web.py"],
 
   ["utils/setup.py", "github:octopuslab-cz/esp32_micropython_framework/utils/setup.py"],
   ["utils/modules_table.py", "github:octopuslab-cz/esp32_micropython_framework/utils/modules_table.py"],
@@ -63,5 +63,5 @@
   ],
   "deps": [
   ],
-  "version": "2.0.8"
+  "version": "2.0.9"
 }
