@@ -11,7 +11,7 @@
   ["examples/temperature_ds.py", "github:octopuslab-cz/esp32_micropython_framework/examples/temperature_ds.py"],
   ["examples/display_lcd2.py", "github:octopuslab-cz/esp32_micropython_framework/examples/display_lcd2.py"],
   ["examples/eeprom_i2c.py", "github:octopuslab-cz/esp32_micropython_framework/examples/eeprom_i2c.py"],
-    
+  ["examples/web_led.py", "github:octopuslab-cz/esp32_micropython_framework/examples/web_led.py"],  
   ],
   "deps": [
   ],
