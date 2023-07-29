@@ -2,9 +2,10 @@
 # (c) OctopusLAB 2016-23 - MIT
 
 from time import sleep, sleep_ms
-import random
+from random import randint
+from . import random_color, random_color_one
 
-__version__ = "2.0.1"
+__version__ = "2.0.2"
 
 # todo: ws_init()
 
@@ -31,7 +32,7 @@ def wheel(pos, dev = 1):
 
 def random_color():
     ## return wheel(urandom(1)[0])
-    return wheel(random.randint(0,256))
+    return wheel(randint(0,256))
 
 
 def ws_RGB_test(ws,delay=0.3,intensity=30):
@@ -83,12 +84,33 @@ def rgb_fill_round(ws_rgb, num_ws, offset=0, c1=((100,0,0)), c2=((0,0,100))):
     #print(offset)
     #print("------------------")
 
-    
+
+def rgb_rnd_noise(rgb, color="X"):
+    wsmax = rgb.num
+    print("ws_max:",wsmax, " | c:",color)
+    num1 = randint(1,6)
+    num2 = randint(10,60)
+    print(num1,num2)
+    for i in range(num2):
+        #rgb_rnd_bla(rgb,num1)
+        rgb.fill((0,0,0))
+        for i in range(num1):
+            num = randint(0,wsmax-1) 
+            if color == "X":
+                rgb.color(random_color(),num)
+            else:
+                rgb.color(random_color_one(color),num)
+
+    #rgb_fill(rgb,BLACK)
+    rgb.fill((0,0,0))
+    #sleep(num1)
+
+"""    
 def pattern_noise(col=(0,100,0),num=8, speed_delay=100,ws_max=32):
-    rndloop = random.randint(0,num)
+    rndloop = randint(0,num)
     for i in range(rndloop):
-        rndnum = random.randint(0,ws_max-1)
-        ri = random.randint(1,100) # random intensity
+        rndnum = randint(0,ws_max-1)
+        ri = randint(1,100) # random intensity
         rndcoli = ((int(col[0]/ri),int(col[1]/ri),int(col[2]/ri)))
         print(ri,rndcoli)
         #ws.color(rndcoli,rndnum)
@@ -96,7 +118,7 @@ def pattern_noise(col=(0,100,0),num=8, speed_delay=100,ws_max=32):
     ws_clear_all(stop=ws_max)
     
 
-"""
+
 def pattern_central(offs=0,col=(100,0,0),num=6):
     wsc =int((WSMAX-1)/2)+offs
     print("---")

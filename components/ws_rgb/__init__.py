@@ -1,10 +1,10 @@
 # basic OctopusLAB library for ws RGB neopixel led - single/strip/ring
 # (c) octopusLAB 2017-23
 
-__version__ = "2.0.2"
+__version__ = "2.0.3"
 
 from time import sleep, sleep_ms
-from os import urandom
+import urandom
 from machine import Pin
 from neopixel import NeoPixel
 from components.ws_rgb.colors_rgb import *
@@ -24,8 +24,25 @@ def wheel(pos, dev = 1):
         return (int((pos * 3)/dev), 0,  int((255 - pos * 3)/dev))
 
 
+def randint(min, max):
+    span = max - min + 1
+    div = 0x3fffffff // span
+    offset = urandom.getrandbits(30) // div
+    val = min + offset
+    return val
+
+
 def random_color():
-    return wheel(urandom(1)[0])
+    #return wheel(urandom(1)[0])
+    return wheel(randint(0,255))
+
+
+def random_color_one(col="G"):
+    if col == "R": num = 0
+    if col == "G": num = 80
+    if col == "B": num = 128
+    add = randint(1,30)
+    return wheel(num+add)
 
 
 
@@ -52,9 +69,11 @@ class Rgb(NeoPixel):
         self.np[0] = (0, 0, 0)
         self.np.write()
 
+
     def color(self, color=RED, i=0):
         self.np[i] = color
         self.np.write()
+
 
     def color_chase(self, np, num_pixels, color, wait):
         for i in range(self.num):
@@ -70,6 +89,13 @@ class Rgb(NeoPixel):
             self.np.write()
             sleep_ms(wait)
 
+    
+    def fill(self, color):
+        for i in range(self.num):
+            self.np[i] = color
+            self.np.write()     
+    
+    
     def test(self):
         #https://github.com/maxking/micropython/blob/master/rainbow.py
         self.simpleTest()
