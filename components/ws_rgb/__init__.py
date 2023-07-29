@@ -5,6 +5,7 @@ __version__ = "2.0.3"
 
 from time import sleep, sleep_ms
 import urandom
+from random impor randint
 from machine import Pin
 from neopixel import NeoPixel
 from components.ws_rgb.colors_rgb import *
@@ -23,14 +24,14 @@ def wheel(pos, dev = 1):
         pos -= 170
         return (int((pos * 3)/dev), 0,  int((255 - pos * 3)/dev))
 
-
+"""
 def randint(min, max):
     span = max - min + 1
     div = 0x3fffffff // span
     offset = urandom.getrandbits(30) // div
     val = min + offset
     return val
-
+"""
 
 def random_color():
     #return wheel(urandom(1)[0])
