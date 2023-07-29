@@ -5,7 +5,7 @@ __version__ = "2.0.3"
 
 from time import sleep, sleep_ms
 import urandom
-from random impor randint
+from random import randint
 from machine import Pin
 from neopixel import NeoPixel
 from components.ws_rgb.colors_rgb import *
