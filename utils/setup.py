@@ -4,7 +4,7 @@
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-__version__ = "2.0.5"
+__version__ = "2.0.6"
 
 import time, uos
 import ujson
@@ -282,8 +282,8 @@ def setup():
             if sel_w == "s":
                 print("Saved wifi networks")
 
-                for k, v in w.config['networks'].items():
-                    print ("SSID: {0}".format(k))
+                for ssid in w.saved_networks(False):
+                    print ("SSID: {}".format(ssid))
 
         if sele == "cw":
               print("Connect WiFi >")

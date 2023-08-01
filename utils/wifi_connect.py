@@ -1,7 +1,7 @@
 # Copyright OctopusLAB 2018-23
 # include this in boot.py or main.py as WiFiConnect
 
-__version__ = "1.0.3"
+__version__ = "2.0.0"
 __license__ = "MIT"
 
 
@@ -131,12 +131,12 @@ class WiFiConnect:
 
 
     def load_config(self):
-         with open('config/wifi.json', 'r') as cfg_file:
+         with open('/config/wifi.json', 'r') as cfg_file:
             self._config = json.loads(cfg_file.read())
 
 
     def save_config(self):
-        with open('config/wifi.json', 'w') as cfg_file:
+        with open('/config/wifi.json', 'w') as cfg_file:
             json.dump(self._config, cfg_file)
 
 
@@ -151,6 +151,10 @@ class WiFiConnect:
         if ssid in self._config['networks']:
             del self._config['networks'][ssid]
             self.save_config()
+
+
+    def saved_networks(self, show_passwords=False):
+        return self._config['networks'].items() if show_passwords else self._config['networks'].keys()
 
 
     def connect(self, ssid=None, password=None):
