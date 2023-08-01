@@ -29,7 +29,8 @@
   ["components/mpu6050.py", "github:octopuslab-cz/esp32_micropython_framework/components/mpu6050.py"],
   ["components/display_segment.py", "github:octopuslab-cz/esp32_micropython_framework/components/display_segment.py"],
   ["components/tm1637.py", "github:octopuslab-cz/esp32_micropython_framework/components/tm1637.py"],
-  
+  ["components/tm1638.py", "github:octopuslab-cz/esp32_micropython_framework/components/tm1638.py"],
+    
   ["lib/octopus_decor.py", "github:octopuslab-cz/esp32_micropython_framework/lib/octopus_decor.py"],
   ["lib/octopus_lib.py", "github:octopuslab-cz/esp32_micropython_framework/lib/octopus_lib.py"],
   ["lib/octopus_digital.py", "github:octopuslab-cz/esp32_micropython_framework/lib/octopus_digital.py"],
