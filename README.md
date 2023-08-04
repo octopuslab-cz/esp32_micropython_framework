@@ -10,14 +10,34 @@ Since MicroPython *ver. 1.20*, new libraries are already being created here, as 
 ## 2023 - support to mip package manager
 
 ```Python
+# mip_install.py # install octopusLAB framework 2
+
+from time import sleep
+import network
 import mip
-mip.install("github:octopuslab-cz/esp32_micropython_framework", target="/")
+
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+sleep(5)
+
+print("wifi connect")
+wlan.connect('ssid', 'password')
+sleep(5)
+
+mip.install("github:octopuslab-cz/esp32_micropython_framework", target=".")
+```
+
+framework / examples / uPyShell ...
+
+```Python
+import mip
+mip.install("github:octopuslab-cz/esp32_micropython_framework", target=".")
 
 # install examples
-mip.install("github:octopuslab-cz/esp32_micropython_framework/examples", target="/")
+mip.install("github:octopuslab-cz/esp32_micropython_framework/examples", target=".")
 
 # adding BLE support
-mip.install("github:octopuslab-cz/esp32_micropython_framework/package_ble.json", target="/")
+mip.install("github:octopuslab-cz/esp32_micropython_framework/package_ble.json", target=".")
 ```
 
 ## 2022 - micropython-octopuslab-installer
