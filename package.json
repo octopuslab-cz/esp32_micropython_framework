@@ -49,6 +49,8 @@
   ["utils/sys_info.py", "github:octopuslab-cz/esp32_micropython_framework/utils/sys_info.py"],
   ["utils/pinout.py", "github:octopuslab-cz/esp32_micropython_framework/utils/pinout.py"],
   ["utils/wifi_connect.py", "github:octopuslab-cz/esp32_micropython_framework/utils/wifi_connect.py"],
+  ["utils/database/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/utils/database/__init__.py"],
+  ["utils/database/influxdb.py", "github:octopuslab-cz/esp32_micropython_framework/utils/database/influxdb.py"],  
   ["utils/mqtt/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/utils/mqtt/__init__.py"],
   ["utils/mqtt/mqtt.py", "github:octopuslab-cz/esp32_micropython_framework/utils/mqtt/mqtt.py"],
 
