@@ -167,7 +167,10 @@ def hex_dump(byte_arr,row=16,addr=0,show_ascii=True):
             ch16 =""
             for i in range(16):
                 data8 = byte_arr[addr+r*16+i]
-                ch16 += chr(data8)
+                if data8 > 0:
+                    ch16 += chr(data8)
+                else:
+                    ch16 += "."
                 print(" ", num_to_hex_str2(data8), end="")
                               
             if show_ascii: print("  '" + ch16 + "'")
