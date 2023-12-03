@@ -5,7 +5,7 @@ from time import sleep, sleep_ms
 from random import randint
 from . import random_color, random_color_one
 
-__version__ = "2.0.2"
+__version__ = "2.0.3"
 
 # todo: ws_init()
 
@@ -85,7 +85,7 @@ def rgb_fill_round(ws_rgb, num_ws, offset=0, c1=((100,0,0)), c2=((0,0,100))):
     #print("------------------")
 
 
-def rgb_rnd_noise(rgb, color="X"):
+def rgb_rnd_noise(rgb, color="X",speed_delay=100):
     wsmax = rgb.num
     print("ws_max:",wsmax, " | c:",color)
     num1 = randint(1,6)
@@ -100,7 +100,7 @@ def rgb_rnd_noise(rgb, color="X"):
                 rgb.color(random_color(),num)
             else:
                 rgb.color(random_color_one(color),num)
-
+    sleep_ms(speed_delay)
     #rgb_fill(rgb,BLACK)
     rgb.fill((0,0,0))
     #sleep(num1)
