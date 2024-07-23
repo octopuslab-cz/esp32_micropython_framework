@@ -300,7 +300,7 @@ def setup():
               if "ETH_CLOCK_GPIO17_OUT" in dir(network):
                   lan = network.LAN(mdc = machine.Pin(23), mdio=machine.Pin(18), phy_type=network.PHY_LAN8720, phy_addr=1, clock_mode=network.ETH_CLOCK_GPIO17_OUT)
               else:
-                  lan = network.LAN(mdc = machine.Pin(23), mdio=machine.Pin(18), phy_type=network.PHY_LAN8720, phy_addr=1)
+                  lan = network.LAN(mdc = machine.Pin(23), mdio=machine.Pin(18), phy_type=network.PHY_LAN8720, phy_addr=1, ref_clk=machine.Pin(17), ref_clk_mode=machine.Pin.OUT)
 
               lan.active(1)
               retry = 0
