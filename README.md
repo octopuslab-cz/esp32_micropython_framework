@@ -7,6 +7,26 @@ Since MicroPython *ver. 1.20*, new libraries are already being created here, as 
 
 ---
 
+## 2024 - basic framework | minimalistic "system"
+
+```Python
+# mip_install.py # install octopusLAB framework 2
+
+from time import sleep
+import network
+import mip
+
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+sleep(5)
+
+print("wifi connect")
+wlan.connect('ssid', 'password')
+sleep(5)
+
+mip.install("github:octopuslab-cz/esp32_micropython_framework/package_min.json", target=".")
+```
+
 ## 2023 - support to mip package manager
 
 ```Python
