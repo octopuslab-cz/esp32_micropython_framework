@@ -9,7 +9,7 @@ uart = bleuart.BLEUART(name='octopus', on_data_received=on_data_received)
 uart.start()
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import struct
 
@@ -87,9 +87,9 @@ _SERVICE = (
 # org.bluetooth.characteristic.gap.appearance.xml
 _ADV_APPEARANCE_GENERIC_COMPUTER = const(128)
 
-_IRQ_CENTRAL_CONNECT = const(1 << 0)
-_IRQ_CENTRAL_DISCONNECT = const(1 << 1)
-_IRQ_GATTS_WRITE = const(1 << 2)
+_IRQ_CENTRAL_CONNECT = const(1)
+_IRQ_CENTRAL_DISCONNECT = const(2)
+_IRQ_GATTS_WRITE = const(3)
 
 _ble = bluetooth.BLE()
 
@@ -121,7 +121,7 @@ class BLEUART:
 
     def start(self):
         _ble.active(True)
-        _ble.irq(handler=self._irq)
+        _ble.irq(self._irq)
 
         ((self._tx_handle, self._rx_handle,),) = _ble.gatts_register_services(
             (_SERVICE,)
