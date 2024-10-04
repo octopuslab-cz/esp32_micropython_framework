@@ -77,3 +77,12 @@ https://pypi.org/project/micropython-octopuslab-installer
 ---
 
 [README_CZ](https://github.com/octopuslab-cz/esp32_micropython_framework/blob/main/README_CZ.md)
+
+---
+
+
+
+## Simple projects
+
+(ESP-BLE-robot)[https://github.com/octopuslab-cz/esp_ble_robot]
+
