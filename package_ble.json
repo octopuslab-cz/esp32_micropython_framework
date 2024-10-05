@@ -12,7 +12,7 @@
   ["utils/ble/bluefruit.py", "github:octopuslab-cz/esp32_micropython_framework/utils/ble/bluefruit.py"],
               
   ["examples/ble_led.py", "github:octopuslab-cz/esp32_micropython_framework/examples/ble_led.py"],
-  
+  ["examples/ble_test24.py", "github:octopuslab-cz/esp32_micropython_framework/examples/ble_test24.py"],
   ],
   "deps": [
   ],
