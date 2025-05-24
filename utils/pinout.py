@@ -66,6 +66,9 @@ def set_pinout():
     if device_config.get('board_type') == "PLCshield" and device_config.get('soc_type') == "esp32c3":
         import pinouts.esp32c3_plc_shield as pinout
 
+    if device_config.get('board_type') == "S3Robotics" and device_config.get('soc_type') == "esp32s3":
+        import pinouts.esp32s3_robotics as pinout
+
     return pinout
 
 
