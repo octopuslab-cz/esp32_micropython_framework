@@ -4,7 +4,7 @@
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-__version__ = "2.0.6"
+__version__ = "2.0.7"
 
 import time, uos
 import ujson
