@@ -23,7 +23,8 @@ devices = [
 ["PLCshield","esp32"],
 ["WeMos OLED","esp32"],
 ["ESP32C3board","esp32c3"],
-["PLCshield","esp32c3"]
+["PLCshield","esp32c3"],
+["S3Robotics","esp32s3"]
 ]
 
 octopusASCII = [
