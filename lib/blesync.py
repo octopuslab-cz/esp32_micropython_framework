@@ -46,7 +46,15 @@ def _call_callbacks(irq_data):
 
 
 def _callback(irq, data):
-    schedule(_call_callbacks, (irq, data))
+    safe_data = tuple(
+        bytes(item) if isinstance(item, (bytes, bytearray, memoryview))
+        else item for item in data
+    )
+
+    try:
+        _call_callbacks((irq, safe_data))
+    except Exception as e:
+        print(f"BLE callback error: {e}")
 
 
 def _register_event(irq, key, bufferlen=1):
