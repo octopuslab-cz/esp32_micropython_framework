@@ -4,7 +4,7 @@
 # it's loaded in boot.py and provides function setup()
 # user is questioned in interactive mode
 
-__version__ = "2.0.7"
+__version__ = "2.0.8"
 
 import time, uos
 import ujson
@@ -23,7 +23,7 @@ devices = [
 ["PLCshield","esp32"],
 ["WeMos OLED","esp32"],
 ["ESP32C3board","esp32c3"],
-["PLCshield","esp32c3"],
+["ESP32C3mini","esp32c3"],    
 ["S3Robotics","esp32s3"]
 ]
 
