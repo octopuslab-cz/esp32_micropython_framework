@@ -1,7 +1,7 @@
 """this module is to load proper pinout per config"""
 import json
 
-__version__ = "2.1.0"
+__version__ = "2.2.0"
 
 
 def get_device_config():
@@ -62,6 +62,9 @@ def set_pinout():
 
     if device_config.get('board_type') == "ESP32C3board" and device_config.get('soc_type') == "esp32c3":
         import pinouts.esp32c3_esp32c3_board as pinout
+
+    if device_config.get('board_type') == "ESP32C3mini" and device_config.get('soc_type') == "esp32c3":
+        import pinouts.esp32c3_mini as pinout
 
     if device_config.get('board_type') == "PLCshield" and device_config.get('soc_type') == "esp32c3":
         import pinouts.esp32c3_plc_shield as pinout
