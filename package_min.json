@@ -26,9 +26,11 @@
   ["pinouts/esp32_iot_board1.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_iot_board1.py"],
   ["pinouts/esp32_hooka.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_hooka.py"],
   ["pinouts/esp32_plc_shield.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_plc_shield.py"],
+  ["pinouts/esp32c3_mini.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32c3_mini.py"],
   ["pinouts/esp32c3_esp32c3_board.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32c3_esp32c3_board.py"]
   ],
   "deps": [
   ],
   "version": "2.1.0"
 }
+
