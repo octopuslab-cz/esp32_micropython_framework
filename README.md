@@ -1,5 +1,11 @@
 # esp32_micropython_framework
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![MicroPython](https://img.shields.io/badge/MicroPython-supported-brightgreen.svg)
+![Platform](https://img.shields.io/badge/platform-ESP32-lightgrey.svg)
+
+
+
 An older version of the module set was created between 2016 and 2022 for ESP32 with MicroPython here:
 https://github.com/octopusengine/octopuslab
 
