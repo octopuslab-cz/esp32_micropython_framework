@@ -90,9 +90,28 @@ https://pypi.org/project/micropython-octopuslab-installer
 
 ## Simple projects
 
-2023: [ESP-BLE-robot](https://github.com/octopuslab-cz/esp_ble_robot)
+2021:
 
-2024: [ESP32-C3-mini](https://github.com/octopuslab-cz/esp32_c3_mini)
+[ESP-4004 emul](https://github.com/octopuslab-cz/micropython_4004-emul)
 
-2025: [ESP32-S3-robotics Board](https://github.com/octopuslab-cz/esp32_s3_robotics)
+2022: 
 
+[ESP-UDI-interface](https://github.com/octopuslab-cz/esp32_micropython_uni_digi_interface)
+
+2023: 
+
+[ESP-BLE-robot](https://github.com/octopuslab-cz/esp_ble_robot)
+
+[RUR-23](https://github.com/octopuslab-cz/octopus_23_rur)
+
+2024:
+
+[ESP32-C3-mini](https://github.com/octopuslab-cz/esp32_c3_mini)
+
+2025: 
+
+[ESP32-S3-robotics Board](https://github.com/octopuslab-cz/esp32_s3_robotics)
+
+2026:
+
+[ESP-S8](https://github.com/agama-point/Bit-Block-Rithm/tree/main/upy)
