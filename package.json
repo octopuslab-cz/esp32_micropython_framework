@@ -53,6 +53,7 @@
   ["utils/database/influxdb.py", "github:octopuslab-cz/esp32_micropython_framework/utils/database/influxdb.py"],  
   ["utils/mqtt/__init__.py", "github:octopuslab-cz/esp32_micropython_framework/utils/mqtt/__init__.py"],
   ["utils/mqtt/mqtt.py", "github:octopuslab-cz/esp32_micropython_framework/utils/mqtt/mqtt.py"],
+  ["utils/octopus_decor.py", "github:octopuslab-cz/esp32_micropython_framework/utils/octopus_decor.py"],
 
   ["pinouts/base.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/base.py"],
   ["pinouts/esp32_base.py", "github:octopuslab-cz/esp32_micropython_framework/pinouts/esp32_base.py"],
